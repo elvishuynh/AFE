@@ -37,7 +37,7 @@ const VinylWrapping = () => {
                         </div>
                         <div className="mt-10 sm:mt-5 lg:px-32">
                             <img ref={imgRef}
-                                src="/public/image3.webp" alt="App screenshot" className="drop-shadow-2xl w-full h-auto rounded-md shadow-white"/>
+                                src="/image3.webp" alt="App screenshot" className="drop-shadow-2xl w-full h-auto rounded-md shadow-white"/>
                         </div>
                     </div>
                     <section className="bg-black" ref={expertRef}>
