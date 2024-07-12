@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import Navbar from './components/Navbar';
-import Splash from './components/Splash';
 import Home from './components/Home';
 import About from './components/About';
 import Services from './components/Services';
@@ -12,18 +11,7 @@ import SocialsPage from './pages/socialsPage';
 import DynamicServiceLoader from './components/DynamicServiceLoader';
 
 const App = () => {
-    const [isSplashActive, setIsSplashActive] = useState(() => {
-        return sessionStorage.getItem('splashShown') !== 'true';
-    });
     const location = useLocation();
-
-    useEffect(() => {
-        if (location.pathname === "/" && !sessionStorage.getItem('splashShown')) {
-            setIsSplashActive(true);
-        } else {
-            setIsSplashActive(false);
-        }
-    }, [location.pathname]);
 
     useEffect(() => {
         if (location.hash) {
@@ -41,26 +29,14 @@ const App = () => {
         }
     }, [location]);
 
-    const handleSplashEnd = () => {
-        setIsSplashActive(false);
-        sessionStorage.setItem('splashShown', 'true');
-    };
-
     return (
         <div className="relative bg-black min-h-screen min-w-[100vw] w-full h-full">
-            {isSplashActive ? (
-                <div className="fixed inset-0 z-50">
-                    <Splash onEnd={handleSplashEnd} />
-                </div>
-            ) : (
-                <Navbar className="top-0 w-full z-49" />
-            )}
-
+            <Navbar className="top-0 w-full z-49" />
             <Routes>
                 <Route path="/" element={
                     <div>
                         <div id="home" className="static z-5 px-8 pt-20 pb-20 lg:pt-20 md:pt-0">
-                            <Home isSplashActive={isSplashActive} />
+                            <Home />
                         </div>
                         <div id="about" className="py-56 lg:py-64">
                             <About />
