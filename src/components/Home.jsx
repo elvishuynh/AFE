@@ -1,7 +1,26 @@
 // src/components/Home.jsx
 import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
-const Home = () => {
+const Home = ({ isSplashActive }) => {
+    // Refs for elements
+    const titleRef1 = useRef(null);
+    const titleRef2 = useRef(null);
+    const expertRef = useRef(null);
+    const locationRef = useRef(null);
+    const imgRef = useRef(null);
+
+    useEffect(() => {
+        // Ensure all refs are current and then animate
+        if (!isSplashActive && titleRef1.current && titleRef2.current && expertRef.current && locationRef.current) {
+            gsap.fromTo(titleRef1.current, { y: -20 }, { opacity: 1, y: 0, duration: 1 });
+            gsap.fromTo(titleRef2.current, { y: -20 }, { opacity: 1, y: 0, duration: 1, delay: 0.5 });
+            gsap.fromTo(imgRef.current, { y: -20 }, { opacity: 1, y: 0, duration: 1, delay: 1.5 });
+            gsap.fromTo(expertRef.current, { y: -20 }, { opacity: 1, y: 0, duration: 1, delay: 2 });
+            gsap.fromTo(locationRef.current, { y: -20 }, { opacity: 1, y: 0, duration: 1, delay: 2.5 });
+        }
+    }, [isSplashActive]);
+
     return (
         <section id="home" className="h-full md:h-screen flex flex-col justify-center items-center pt-0 md:pt-24 lg:pt-52 pb-2 md:pb-24 lg:pb-32 static text-white">
             <h1 ref={titleRef1} className="text-5xl md:text-7xl font-azo-sans font-bold pb-8 text-center opacity-0">
