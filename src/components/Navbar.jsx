@@ -11,12 +11,12 @@ import NavDropdown from './NavDropdown';
 
 gsap.registerPlugin(SplitText, CSSPlugin);
 const servicesItems = [
-    { label: ' Paint Protection Film', link: '/ppf' },
-    { label: 'Ceramic Coating', link: '/cc' },
-    { label: 'Vinyl Wrapping', link: '/vw' },
-    { label: 'Window Tinting', link: '/wt' },
-    { label: 'Brake Caliper Paint', link: '/bcp' },
-    { label: 'Stars in the Ceiling', link: '/stars' },
+    { label: ' Paint Protection Film', link: '/paint-protection-film' },
+    { label: 'Ceramic Coating', link: '/ceramic-coating' },
+    { label: 'Vinyl Wrapping', link: '/vinyl-wrapping' },
+    { label: 'Window Tinting', link: '/window-tinting' },
+    { label: 'Brake Caliper Paint', link: '/brake-caliper-painting' },
+    { label: 'Stars in the Ceiling', link: '/stars-in-the-ceiling' },
   ];
 
 const Navbar = () => {
@@ -91,9 +91,13 @@ const Navbar = () => {
             </div>
         <div ref={navbarRef} className="navbar sticky top-0 w-full flex justify-between items-center px-4 py-1 z-[999] bg-black transition-all ease-out duration-500" style={{ height: '60px' }}>
             <div className="links hidden md:flex justify-center font-azo-sans font-normal text-white" style={{ flexGrow: 3 }}>
-                <LinkComponent to={isHomePage ? "home" : "/"} smooth={true} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-xl" onClick={() => handleNavigation('home')}>HOME</LinkComponent>
-                <LinkComponent to={isHomePage ? "about" : "/#about"} smooth={true} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-xl" onClick={() => handleNavigation('about')}>ABOUT</LinkComponent>
-                {/* <LinkComponent to={isHomePage ? "services" : "/"} smooth={true} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-xl" onClick={() => handleNavigation('services')}>SERVICES</LinkComponent> */}
+                <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase" >
+                    <LinkComponent to={isHomePage ? "home" : "/"} smooth={true} duration={500} onClick={() => handleNavigation('home')}>Home</LinkComponent>
+                </div>
+                <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
+                    <LinkComponent to={isHomePage ? "about" : "/about"} smooth={true} duration={500} onClick={() => handleNavigation('about')}>About</LinkComponent>
+                </div>
+                {/* <LinkComponent to={isHomePage ? "services" : "/"} smooth={true} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-3xl" onClick={() => handleNavigation('services')}>SERVICES</LinkComponent> */}
                 <NavDropdown
                     title="SERVICES"
                     items={servicesItems}
@@ -101,9 +105,15 @@ const Navbar = () => {
                     toggleDropdown={() => toggleDropdown('services')}
                     closeDropdown={closeDropdown}
                 />
-                <LinkComponent to={isHomePage ? "contact" : "/#contact"} smooth={true} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-xl" onClick={() => handleNavigation('contact')}>CONTACT</LinkComponent>
-                <RouterLink to={"/store"} smooth={true} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase" >Store</RouterLink>
-                <RouterLink to={"/socials"} smooth={true} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase" >Socials</RouterLink>
+                <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
+                    <LinkComponent to={isHomePage ? "contact" : "/contact"} smooth={true} duration={500} onClick={() => handleNavigation('contact')}>Contact</LinkComponent>
+                </div>
+                <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
+                    <RouterLink to={"/store"} smooth={true} duration={500}>Store</RouterLink>
+                </div>
+                <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
+                    <RouterLink to={"/socials"} smooth={true} duration={500}>Socials</RouterLink>
+                </div>
             </div>
             <div className="md:hidden flex items-center z-40">
                 <button onClick={() => setIsOpen(!isOpen)} className="text-white z-50">
@@ -115,19 +125,31 @@ const Navbar = () => {
                 </button>
             </div>
             <div ref={menuRef} className="mobile-menu md:hidden absolute top-0 left-0 w-full bg-zinc-500 flex flex-col items-center z-30 overflow-x-hidden overflow-y-scroll  rounded-lg transition-max-height duration-500 ease-out" style={{ maxHeight: 0, opacity: 0, display: 'none' }}>
-                <LinkComponent to={isHomePage ? "home" : "/"} smooth={true} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-xl" onClick={() => { setIsOpen(false); handleNavigation('home'); }}>HOME</LinkComponent>
-                <LinkComponent to={isHomePage ? "about" : "/#about"} smooth={true} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-xl" onClick={() => { setIsOpen(false); handleNavigation('about'); }}>ABOUT</LinkComponent>
-                {/* <LinkComponent to={isHomePage ? "services" : "/services"} smooth={true} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-xl" onClick={() => { setIsOpen(false); handleNavigation('services'); }}>SERVICES</LinkComponent> */}
-                <NavDropdown
+                <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
+                    <LinkComponent to={isHomePage ? "home" : "/"} smooth={true} duration={300}onClick={() => { setIsOpen(false); handleNavigation('home'); }}>Home</LinkComponent>
+                </div>
+                <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
+                    <LinkComponent to={isHomePage ? "about" : "/about"} smooth={true} duration={300} onClick={() => { setIsOpen(false); handleNavigation('about'); }}>About</LinkComponent>
+                </div>
+                <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase" >
+                    <LinkComponent to={isHomePage ? "services" : "/services"} smooth={true} duration={300} onClick={() => { setIsOpen(false); handleNavigation('services'); }}>Services</LinkComponent>
+                </div>
+                {/* <NavDropdown
                     title="SERVICES"
                     items={servicesItems}
                     isOpen={openDropdown === 'services'}
                     toggleDropdown={() => toggleDropdown('services')}
                     closeDropdown={closeDropdown}
-                />
-                <LinkComponent to={isHomePage ? "contact" : "/#contact"} smooth={true} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-xl" onClick={() => { setIsOpen(false); handleNavigation('contact'); }}>CONTACT</LinkComponent>
-                <RouterLink to={"/store"} smooth={true} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-xl uppercase " >Store</RouterLink>
-                <RouterLink to={"/socials"} smooth={true} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-xl uppercase" >Socials</RouterLink>
+                /> */}
+                <div>
+                    <LinkComponent to={isHomePage ? "contact" : "/contact"} smooth={true} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl" onClick={() => { setIsOpen(false); handleNavigation('contact'); }}>CONTACT</LinkComponent>
+                </div>
+                <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
+                    <RouterLink to={"/store"} smooth={true} duration={300}>Store</RouterLink>
+                </div>
+                <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase" >
+                    <RouterLink to={"/socials"} smooth={true} duration={300}>Socials</RouterLink>
+                </div>
             </div>
         </div>
         </div>

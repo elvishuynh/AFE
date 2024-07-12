@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
 
-const Ppf = () => {
+const PaintProtectionFilm = () => {
     useScrollRestoration();
     const titleRef1 = useRef(null);
     const titleRef2 = useRef(null);
@@ -26,11 +26,11 @@ const Ppf = () => {
                 <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
                         <div className="mx-auto text-center max-w-2xl">
-                            <p ref={titleRef1} className="text-4xl font-bold tracking-tight text-white sm:text-6xl">PAINT PROTECTION FILM</p>
+                            <p ref={titleRef1} className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-white">PAINT PROTECTION FILM</p>
                             <p ref={titleRef2} lineheight="8" className="mt-6 text-lg text-white">Paint protection film or clear bra helps you protect your
                                 vehicle's exterior from the wear and tear of everyday hazards.</p>
                             <div className="mt-10 items-center justify-center flex gap-x-6">
-                                <a ref={titleRef1} href="/#contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm
+                                <a ref={titleRef1} href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm
                                     hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
                                     focus-visible:outline-gray-900">Get started</a>
                             </div>
@@ -144,4 +144,4 @@ const Ppf = () => {
     );
 };
 
-export default Ppf;
+export default PaintProtectionFilm;

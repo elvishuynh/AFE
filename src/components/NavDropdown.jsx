@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import useComponentVisible from '../hooks/useComponentVisible';
 
-const NavDropdown = ({ title, items, isOpen, toggleDropdown, closeDropdown }) => {
+const NavDropdown = ({ title, items }) => {
   const { visibleRef, isComponentVisible, setIsComponentVisible } =
 		useComponentVisible(false);
 

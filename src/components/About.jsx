@@ -6,7 +6,7 @@ import SplitText from 'gsap/SplitText';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-const Home = () => {
+const About = () => {
     const titleRef = useRef(null);
     const expertRef = useRef(null);
     const locationRef = useRef(null);
@@ -70,17 +70,17 @@ const Home = () => {
     }, []);
 
     return (
-        <section id="home" className="h-screen flex flex-col justify-evenly items-center p-10 text-white">
-            <h1 ref={titleRef} className="text-5xl font-azo-sans font-bold py-8 text-center ">
+        <section id="about" className="h-screen flex flex-col justify-evenly items-center p-10 text-white">
+            <h1 ref={titleRef} className="text-3xl sm:text-4xl md:text-5xl font-azo-sans font-bold py-8 text-center ">
                 About Us
             </h1>  
-            <p ref={expertRef} className="text-xl text-center py-5">
+            <p ref={expertRef} className="text-3xl text-center py-5">
             Welcome to Auto Film Experts, where automotive excellence meets unrivaled protection and style. At the forefront of innovation in the automotive industry, we specialize in Paint Protection Film, Vinyl Wraps, Ceramic Coating, and Tinting Services that redifine vehicle aesthetics and safeguard against the elements.
             </p>
-            <p ref={locationRef} className="text-xl text-center py-5">
+            <p ref={locationRef} className="text-3xl text-center py-5">
             Our passion and commitment to quality craftsmanship make us the go-to destination for enthusiasts who demand nothing but the best for their vehicles. Step into a world where cutting-edge technology meets automotive artistry, and let us elevate your driving experience.
             </p>
-            <p ref={locationRef1} className="text-xl text-centser py-5">
+            <p ref={locationRef1} className="text-3xl text-centser py-5">
                 We believe in building lasting relationships with our customers, founded on trust, integrity, and transparent communication. Our team is always ready to answer your questions, provide expert advice, and guide you through the process of transforming your vehicle.
             </p>
             <div className="flex justify-between items-center w-full mt-5">
@@ -92,4 +92,4 @@ const Home = () => {
     );
 };
 
-export default Home;
+export default About;

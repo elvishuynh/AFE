@@ -1,7 +1,7 @@
 // DynamicServiceLoader.js
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import Ppf from './service/Ppf';
+import PaintProtectionFilm from './service/PaintProtectionFilm';
 import CeramicCoating from './service/CeramicCoating';
 import VinylWrapping from './service/VinylWrapping';
 import WindowTinting from './service/WindowTinting';
@@ -9,12 +9,12 @@ import BrakeCaliper from './service/BrakeCaliper';
 import StarsCeiling from './service/StarsCeiling';
 
 const serviceComponents = {
-  ppf: Ppf,
-  cc: CeramicCoating,
-  vw: VinylWrapping,
-  wt: WindowTinting,
-  bcp: BrakeCaliper,
-  stars: StarsCeiling,
+  "paint-protection-film": PaintProtectionFilm,
+  "ceramic-coating": CeramicCoating,
+  "vinyl-wrapping": VinylWrapping,
+  "window-tinting": WindowTinting,
+  "brake-caliper-painting": BrakeCaliper,
+  "stars-in-the-ceiling": StarsCeiling,
 };
 
 const DynamicServiceLoader = () => {
