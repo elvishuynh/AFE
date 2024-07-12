@@ -12,6 +12,7 @@ const Contact = () => {
     });
     const formRef = useRef(null);
     const contactTitleRef = useRef(null);
+    const locationRef1 = useRef(null);
 
     useEffect(() => {
         if (isSubmitSuccessful) {
@@ -37,6 +38,21 @@ const Contact = () => {
                 }
             }
         );
+        const triggers = [
+            { ref: locationRef1, delay: 1.5 }
+        ];
+        triggers.forEach(({ ref, delay }) => {
+            gsap.fromTo(ref.current, { opacity: 0, y: -20 }, {
+                opacity: 1, y: 0, duration: 1, delay,
+                scrollTrigger: {
+                    trigger: ref.current,
+                    start: 'top bottom',
+                    end: 'bottom top',
+                    toggleActions: 'play none none none',
+                    markers: false
+                }
+            });
+        });
 
         const titleSplit = new SplitText(contactTitleRef.current, { type: "chars" });
         const chars = titleSplit.chars; // Array of characters
@@ -81,8 +97,11 @@ const Contact = () => {
     };
 
     return (
-        <>
-            <h1 ref={contactTitleRef} className="text-3xl sm:text-4xl md:text-5xl font-azo-sans font-bold py-8 text-center text-white">Contact Us!</h1>
+        <div className="container mx-auto">
+            <h1 ref={contactTitleRef} className="text-3xl sm:text-4xl md:text-5xl font-azo-sans font-bold py-8 text-center text-white">Contact Us</h1>
+            <p ref={locationRef1} className="text-base sm:text-xl md:text-2xl text-center py-5">
+                We believe in building lasting relationships with our customers, founded on trust, integrity, and transparent communication. Our team is always ready to answer your questions, provide expert advice, and guide you through the process of transforming your vehicle.
+            </p>
             <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white p-8 rounded-lg shadow-md w-9/12 mx-auto">
                 <div className="form-group flex space-x-4">
                     <div className="w-1/2">
@@ -125,7 +144,7 @@ const Contact = () => {
                 </div>
                 <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-AFE-RED hover:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-AFE-RED">Send</button>
             </form>
-        </>
+        </div>
     );
 };
 

@@ -2,18 +2,18 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import PaintProtectionFilm from './service/PaintProtectionFilm';
-import CeramicCoating from './service/CeramicCoating';
-import VinylWrapping from './service/VinylWrapping';
-import WindowTinting from './service/WindowTinting';
-import BrakeCaliper from './service/BrakeCaliper';
+import CeramicCoat from './service/CeramicCoat';
+import VinylWrap from './service/VinylWrap';
+import WindowTint from './service/WindowTint';
+import BrakeCaliperPaint from './service/BrakeCaliperPaint';
 import StarsCeiling from './service/StarsCeiling';
 
 const serviceComponents = {
   "paint-protection-film": PaintProtectionFilm,
-  "ceramic-coating": CeramicCoating,
-  "vinyl-wrapping": VinylWrapping,
-  "window-tinting": WindowTinting,
-  "brake-caliper-painting": BrakeCaliper,
+  "ceramic-coat": CeramicCoat,
+  "vinyl-wrap": VinylWrap,
+  "window-tint": WindowTint,
+  "brake-caliper-paint": BrakeCaliperPaint,
   "stars-in-the-ceiling": StarsCeiling,
 };
 

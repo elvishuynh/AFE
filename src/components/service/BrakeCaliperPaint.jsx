@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
 
-const WindowTinting = () => {
+const BrakeCaliperPaint = () => {
     useScrollRestoration();
     const titleRef1 = useRef(null);
     const titleRef2 = useRef(null);
@@ -23,11 +23,11 @@ const WindowTinting = () => {
         <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
             
             <div className="pt-14">
-                <div className="py-24 sm:py-32 lg:pb-40">
+                <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
                         <div className="mx-auto text-center max-w-2xl">
-                            <p ref={titleRef1} className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-white">Window Tinting</p>
-                            <p ref={titleRef2} lineheight="8" className="mt-6 text-lg text-white">Window tinting helps protect your vehicle's interior from harmful UV rays, reduces heat and glare, and enhances privacy, all while providing a sleek, stylish appearance.</p>
+                            <p ref={titleRef1} className="text-2xl sm:text-3xl md:text-5xl font-bold tracking-tight text-white">Brake Caliper Paint</p>
+                            <p ref={titleRef2} lineheight="8" className="mt-6 text-lg text-white">Brake caliper paint enhances the appearance of your vehicle's brake calipers while providing protection against rust, corrosion, and high temperatures.</p>
                             <div className="mt-10 items-center justify-center flex gap-x-6">
                                 <a ref={titleRef1} href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm
                                     hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
@@ -36,7 +36,7 @@ const WindowTinting = () => {
                         </div>
                         <div className="mt-10 sm:mt-5 lg:px-32">
                             <img ref={imgRef}
-                                src="/DSC01992.webp" alt="App screenshot" className="drop-shadow-2xl w-full h-auto rounded-md shadow-white"/>
+                                src="https://images.unsplash.com/photo-1625299961965-6d57db637628?q=80&w=5187&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="App screenshot" className="drop-shadow-2xl w-full h-auto rounded-md shadow-white"/>
                         </div>
                     </div>
                     <section className="bg-black" ref={expertRef}>
@@ -48,41 +48,41 @@ const WindowTinting = () => {
                                 <dl className="pt-12 md:grid-cols-3 lg:gap-36 text-lg border-t border-white/10 grid grid-cols-1 gap-12">
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Heat Reduction</p>
+                                            <p lineheight="6" className="text-base font-medium text-white">Aesthetic Enhancement</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Window tinting can significantly reduce the amount of heat that enters your vehicle, making it more comfortable to drive and reducing the need for air conditioning.</dd>
+                                        <dd className="mt-4 text-base text-white">Painting your brake calipers adds a pop of color and a sporty look to your vehicle, enhancing its overall appearance and making it stand out.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">UV Protection</p>
+                                            <p lineheight="6" className="text-base font-medium text-white">Rust and Corrosion Protection</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Tinted windows block up to 99% of harmful UV rays, protecting your skin from sun damage and preventing the vehicle's interior from fading and cracking.</dd>
+                                        <dd className="mt-4 text-base text-white">The paint acts as a protective barrier against rust and corrosion, extending the life of your brake calipers by preventing damage from moisture and road salt.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Glare Reduction</p>
+                                            <p lineheight="6" className="text-base font-medium text-white">Heat Resistance</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Tints reduce glare from the sun and headlights, enhancing driving visibility and reducing eye strain.</dd>
+                                        <dd className="mt-4 text-base text-white">Brake caliper paint is specially formulated to withstand the high temperatures generated by braking, ensuring that the color remains vibrant and does not peel or discolor over time.</dd>
                                     </div>
                                 </dl>
                                 <dl className="pt-12 lg:gap-36 md:grid-cols-3 text-lg border-t border-white/10 grid grid-cols-1 gap-12">
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Increased Privacy</p>
+                                            <p lineheight="6" className="text-base font-medium text-white">Advanced Formulation</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Tinted windows provide added privacy by making it harder for outsiders to see inside your vehicle, protecting your belongings and personal space.</dd>
+                                        <dd className="mt-4 text-base text-white">Advanced formulations that include ceramic resins and heat-resistant compounds. This technology ensures superior adhesion, long-lasting color retention, and resistance to chipping and fading, even under extreme braking conditions.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Advanced Technology</p>
+                                            <p lineheight="6" className="text-base font-medium text-white">Easy Maintenance</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Tinted windows give your vehicle a sleek, stylish look, enhancing its overall appearance and potentially increasing its resale value.</dd>
+                                        <dd className="mt-4 text-base text-white">Painted calipers are easier to clean and maintain compared to unpainted ones, as the smooth painted surface repels brake dust and grime more effectively.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Enhanced appearance</p>
+                                            <p lineheight="6" className="text-base font-medium text-white">Customizable Appearance</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">These films are engineered at a microscopic level to ensure optimal performance without compromising visibility or aesthetics.</dd>
+                                        <dd className="mt-4 text-base text-white">Available in a variety of colors and finishes, brake caliper paint allows you to personalize your vehicle’s look to match your style or the overall design theme of your car.</dd>
                                     </div>
                                 </dl>
                             </div>
@@ -94,4 +94,4 @@ const WindowTinting = () => {
     );
 };
 
-export default WindowTinting;
+export default BrakeCaliperPaint;

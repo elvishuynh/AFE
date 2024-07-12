@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
 
-const CeramicCoating = () => {
+const CeramicCoat = () => {
     useScrollRestoration();
     const titleRef1 = useRef(null);
     const titleRef2 = useRef(null);
@@ -135,4 +135,4 @@ const CeramicCoating = () => {
     );
 };
 
-export default CeramicCoating;
+export default CeramicCoat;

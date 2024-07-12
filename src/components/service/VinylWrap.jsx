@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
 
-const VinylWrapping = () => {
+const VinylWrap = () => {
     useScrollRestoration();
     const titleRef1 = useRef(null);
     const titleRef2 = useRef(null);
@@ -97,4 +97,4 @@ const VinylWrapping = () => {
     );
 };
 
-export default VinylWrapping;
+export default VinylWrap;
