@@ -12,10 +12,10 @@ import NavDropdown from './NavDropdown';
 gsap.registerPlugin(SplitText, CSSPlugin);
 const servicesItems = [
     { label: ' Paint Protection Film', link: '/paint-protection-film' },
-    { label: 'Ceramic Coating', link: '/ceramic-coating' },
-    { label: 'Vinyl Wrapping', link: '/vinyl-wrapping' },
-    { label: 'Window Tinting', link: '/window-tinting' },
-    { label: 'Brake Caliper Paint', link: '/brake-caliper-painting' },
+    { label: 'Ceramic Coat', link: '/ceramic-coat' },
+    { label: 'Vinyl Wrap', link: '/vinyl-wrap' },
+    { label: 'Window Tint', link: '/window-tint' },
+    { label: 'Brake Caliper Paint', link: '/brake-caliper-paint' },
     { label: 'Stars in the Ceiling', link: '/stars-in-the-ceiling' },
 ];
 
@@ -30,7 +30,6 @@ const Navbar = () => {
     const location = useLocation();
     const navigate = useNavigate();
 
-    const isHomePage = location.pathname === '/';
 
     const toggleDropdown = (dropdown) => {
         setOpenDropdown(openDropdown === dropdown ? null : dropdown);
@@ -39,28 +38,6 @@ const Navbar = () => {
     const closeDropdown = () => {
         setOpenDropdown(null);
     };
-
-    const handleNavigation = (target) => {
-        if (isHomePage) {
-            scroller.scrollTo(target, {
-                duration: 500,
-                delay: 0,
-                smooth: 'easeInOutQuart'
-            });
-        } else {
-            navigate('/', { replace: true }).then(() => {
-                setTimeout(() => {
-                    scroller.scrollTo(target, {
-                        duration: 500,
-                        delay: 0,
-                        smooth: 'easeInOutQuart'
-                    });
-                }, 100); // slight delay to ensure the page is loaded
-            });
-        }
-    };
-
-    const LinkComponent = isHomePage ? ScrollLink : RouterLink;
 
     useGSAP(() => {
         const menu = menuRef.current;
@@ -92,9 +69,9 @@ const Navbar = () => {
             <div ref={navbarRef} className="navbar sticky top-0 w-full flex justify-between items-center px-4 py-1 z-[999] bg-black transition-all ease-out duration-500" style={{ height: '60px' }}>
                 <div className="links hidden md:flex justify-center font-azo-sans font-normal text-white" style={{ flexGrow: 3 }}>
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase" >
-                        <LinkComponent to={isHomePage ? "home" : "/"} smooth={"easeInOutQuart"} duration={500} onClick={() => handleNavigation('home')}>Home</LinkComponent>
+                        <RouterLink to={"/"} smooth={"easeInOutQuart"} duration={500} onClick={() => handleNavigation('home')}>Home</RouterLink>
                     </div>
-                    {/* <LinkComponent to={isHomePage ? "services" : "/"} smooth={"easeInOutQuart"} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-3xl" onClick={() => handleNavigation('services')}>SERVICES</LinkComponent> */}
+                    {/* <RouterLink to={isHomePage ? "services" : "/"} smooth={"easeInOutQuart"} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-3xl" onClick={() => handleNavigation('services')}>SERVICES</RouterLink> */}
                     <NavDropdown
                         title="SERVICES"
                         items={servicesItems}
@@ -103,10 +80,10 @@ const Navbar = () => {
                         closeDropdown={closeDropdown}
                     />
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
-                        <LinkComponent to={isHomePage ? "/about" : "/about"} smooth={"easeInOutQuart"} duration={500} onClick={() => handleNavigation('about')}>About</LinkComponent>
+                        <RouterLink to={"/about"} smooth={"easeInOutQuart"} duration={500} onClick={() => handleNavigation('about')}>About</RouterLink>
                     </div>
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
-                        <LinkComponent to={isHomePage ? "/contact" : "/contact"} smooth={"easeInOutQuart"} duration={500} onClick={() => handleNavigation('contact')}>Contact</LinkComponent>
+                        <RouterLink to={"/contact"} smooth={"easeInOutQuart"} duration={500} onClick={() => handleNavigation('contact')}>Contact</RouterLink>
                     </div>
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
                         <RouterLink to={"/store"} smooth={"easeInOutQuart"} duration={500}>Store</RouterLink>
@@ -126,24 +103,24 @@ const Navbar = () => {
                 </div>
                 <div ref={menuRef} className="mobile-menu md:hidden absolute top-0 left-0 w-full bg-zinc-500 flex flex-col items-center z-30 overflow-x-hidden overflow-y-scroll  rounded-lg transition-max-height duration-500 ease-out" style={{ maxHeight: 0, opacity: 0, display: 'none' }}>
                     <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
-                        <LinkComponent to={isHomePage ? "home" : "/"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); handleNavigation('home'); }}>Home</LinkComponent>
+                        <RouterLink to={"/"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); handleNavigation('home'); }}>Home</RouterLink>
                     </div>
 
-                    <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase" >
-                        <LinkComponent to={isHomePage ? "services" : "/services"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); handleNavigation('services'); }}>Services</LinkComponent>
-                    </div>
-                    {/* <NavDropdown
-                    title="SERVICES"
-                    items={servicesItems}
-                    isOpen={openDropdown === 'services'}
-                    toggleDropdown={() => toggleDropdown('services')}
-                    closeDropdown={closeDropdown}
-                /> */}
+                    {/* <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase" >
+                        <RouterLink to={"/services"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); handleNavigation('services'); }}>Services</RouterLink>
+                    </div> */}
+                    <NavDropdown
+                        title="SERVICES"
+                        items={servicesItems}
+                        isOpen={openDropdown === 'services'}
+                        toggleDropdown={() => toggleDropdown('services')}
+                        closeDropdown={closeDropdown}
+                    />
                     <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
-                        <LinkComponent to={isHomePage ? "about" : "/about"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); handleNavigation('about'); }}>About</LinkComponent>
+                        <RouterLink to={"/about"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); handleNavigation('about'); }}>About</RouterLink>
                     </div>
                     <div>
-                        <LinkComponent to={isHomePage ? "contact" : "/contact"} smooth={"easeInOutQuart"} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl" onClick={() => { setIsOpen(false); handleNavigation('contact'); }}>CONTACT</LinkComponent>
+                        <RouterLink to={"/contact"} smooth={"easeInOutQuart"} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl" onClick={() => { setIsOpen(false); handleNavigation('contact'); }}>CONTACT</RouterLink>
                     </div>
                     <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
                         <RouterLink to={"/store"} smooth={"easeInOutQuart"} duration={300}>Store</RouterLink>
