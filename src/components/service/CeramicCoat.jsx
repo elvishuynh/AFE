@@ -46,7 +46,7 @@ const CeramicCoat = () => {
                                 <img src="/shop6.webp" alt="Partial Front Coverage" className="min-w-full min-h-full h-auto object-cover object-center" />
                             </div>
                             <section>
-                                <video ref={videoRef} src="/afe_tiktok.mp4" controls />
+                                <video ref={videoRef} src="/afe_tiktok.mp4" controls autoplay />
                             </section>
                             <div className="sm:w-1/3 w-full overflow-hidden rounded-lg">
                                 <img src="/shop7.webp" alt="Partial Front Coverage" className="min-w-full min-h-full h-auto object-cover object-center" />
