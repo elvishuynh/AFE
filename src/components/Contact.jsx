@@ -97,7 +97,7 @@ const Contact = () => {
     };
 
     return (
-        <div className="container mx-auto">
+        <div id="contact" className="container mx-auto">
             <h1 ref={contactTitleRef} className="text-3xl sm:text-4xl md:text-5xl font-azo-sans font-bold py-8 text-center text-white">Contact Us</h1>
             <p ref={locationRef1} className="text-base sm:text-xl md:text-2xl text-center py-5">
                 We believe in building lasting relationships with our customers, founded on trust, integrity, and transparent communication. Our team is always ready to answer your questions, provide expert advice, and guide you through the process of transforming your vehicle.
