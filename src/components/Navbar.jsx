@@ -69,7 +69,7 @@ const Navbar = () => {
             <div ref={navbarRef} className="navbar sticky top-0 w-full flex justify-between items-center px-4 py-1 z-[999] bg-black transition-all ease-out duration-500" style={{ height: '60px' }}>
                 <div className="links hidden md:flex justify-center font-azo-sans font-normal text-white" style={{ flexGrow: 3 }}>
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase" >
-                        <RouterLink to={"/"} smooth={"easeInOutQuart"} duration={500} onClick={() => handleNavigation('home')}>Home</RouterLink>
+                        <RouterLink to={"/"} smooth={"easeInOutQuart"} duration={500}>Home</RouterLink>
                     </div>
                     {/* <RouterLink to={isHomePage ? "services" : "/"} smooth={"easeInOutQuart"} duration={500} className="mx-10 cursor-pointer hover:text-red-500 text-3xl" onClick={() => handleNavigation('services')}>SERVICES</RouterLink> */}
                     <NavDropdown
@@ -80,10 +80,10 @@ const Navbar = () => {
                         closeDropdown={closeDropdown}
                     />
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
-                        <RouterLink to={"/about"} smooth={"easeInOutQuart"} duration={500} onClick={() => handleNavigation('about')}>About</RouterLink>
+                        <RouterLink to={"/about"} smooth={"easeInOutQuart"} duration={500}>About</RouterLink>
                     </div>
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
-                        <RouterLink to={"/contact"} smooth={"easeInOutQuart"} duration={500} onClick={() => handleNavigation('contact')}>Contact</RouterLink>
+                        <RouterLink to={"/contact"} smooth={"easeInOutQuart"} duration={500}>Contact</RouterLink>
                     </div>
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
                         <RouterLink to={"/store"} smooth={"easeInOutQuart"} duration={500}>Store</RouterLink>
@@ -103,7 +103,7 @@ const Navbar = () => {
                 </div>
                 <div ref={menuRef} className="mobile-menu md:hidden absolute top-0 left-0 w-full bg-zinc-500 flex flex-col items-center z-30 overflow-x-hidden overflow-y-scroll  rounded-lg transition-max-height duration-500 ease-out" style={{ maxHeight: 0, opacity: 0, display: 'none' }}>
                     <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
-                        <RouterLink to={"/"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); handleNavigation('home'); }}>Home</RouterLink>
+                        <RouterLink to={"/"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); }}>Home</RouterLink>
                     </div>
 
                     {/* <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase" >
@@ -117,10 +117,10 @@ const Navbar = () => {
                         closeDropdown={closeDropdown}
                     />
                     <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
-                        <RouterLink to={"/about"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); handleNavigation('about'); }}>About</RouterLink>
+                        <RouterLink to={"/about"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); }}>About</RouterLink>
                     </div>
                     <div>
-                        <RouterLink to={"/contact"} smooth={"easeInOutQuart"} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl" onClick={() => { setIsOpen(false); handleNavigation('contact'); }}>CONTACT</RouterLink>
+                        <RouterLink to={"/contact"} smooth={"easeInOutQuart"} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl" onClick={() => { setIsOpen(false);}}>CONTACT</RouterLink>
                     </div>
                     <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
                         <RouterLink to={"/store"} smooth={"easeInOutQuart"} duration={300}>Store</RouterLink>
