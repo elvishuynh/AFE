@@ -9,25 +9,22 @@ const CeramicCoat = () => {
     const expertRef = useRef(null);
     const locationRef = useRef(null);
     const imgRef = useRef(null);
-
+    const videoRef = useRef(null);
+    // Ensure the video is loaded and then play it
+    if (videoRef.current) {
+        videoRef.current.load();
+        videoRef.current.play();
+    }
     useEffect(() => {
         // Ensure all refs are current and then animate
-        if (titleRef1.current ) {
+        if (titleRef1.current) {
             gsap.fromTo(titleRef1.current, { y: -20 }, { opacity: 1, y: 0, duration: 1 });
             gsap.fromTo(titleRef2.current, { y: -20 }, { opacity: 1, y: 0, duration: 1, delay: 0.5 });
             gsap.fromTo(imgRef.current, { y: -20 }, { opacity: 1, y: 0, duration: 1, delay: 1.5 });
             gsap.fromTo(expertRef.current, { y: -20 }, { opacity: 1, y: 0, duration: 1, delay: 2 });
             gsap.fromTo(locationRef.current, { y: -20 }, { opacity: 1, y: 0, duration: 1, delay: 2.5 });
         }
-
-        // Append TikTok script
-        const script = document.createElement('script');
-        script.src = "https://www.tiktok.com/embed.js";
-        script.async = true;
-        document.body.appendChild(script);
-
         return () => {
-            document.body.removeChild(script);
         };
     }, []);
     return (
@@ -45,19 +42,16 @@ const CeramicCoat = () => {
                             </div>
                         </div>
                         <div className="flex flex-col sm:flex-row justify-center items-stretch space-y-4 sm:space-y-0 sm:space-x-4 mt-10">
-    <div className="sm:w-1/3 w-full overflow-hidden rounded-lg">
-        <img src="/shop6.webp" alt="Partial Front Coverage" className="min-w-full min-h-full h-auto object-cover object-center" />
-    </div>
-    <blockquote className="tiktok-embed sm:w-1/3 w-full rounded-xl" cite="https://www.tiktok.com/@autofilmexperts/video/7349043067833437482" data-video-id="7349043067833437482" style={{ maxWidth: '323px', minWidth: '323px', border: 'none' }}>
-        <section>
-            <a target="_blank" title="@autofilmexperts" href="https://www.tiktok.com/@autofilmexperts?refer=embed">@autofilmexperts</a>
-            Adding ceramic coating 👀👀 😏
-        </section>
-    </blockquote>
-    <div className="sm:w-1/3 w-full overflow-hidden rounded-lg">
-        <img src="/shop7.webp" alt="Partial Front Coverage" className="min-w-full min-h-full h-auto object-cover object-center" />
-    </div>
-</div>
+                            <div className="sm:w-1/3 w-full overflow-hidden rounded-lg">
+                                <img src="/shop6.webp" alt="Partial Front Coverage" className="min-w-full min-h-full h-auto object-cover object-center" />
+                            </div>
+                            <section>
+                                <video ref={videoRef} src="/afe_tiktok.mp4" controls autoPlay muted />
+                            </section>
+                            <div className="sm:w-1/3 w-full overflow-hidden rounded-lg">
+                                <img src="/shop7.webp" alt="Partial Front Coverage" className="min-w-full min-h-full h-auto object-cover object-center" />
+                            </div>
+                        </div>
                     </div>
                     <section className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
@@ -128,7 +122,7 @@ const CeramicCoat = () => {
                                 </dl>
                             </div>
                         </div>
-                        </section>
+                    </section>
                 </div>
             </div>
         </section>
