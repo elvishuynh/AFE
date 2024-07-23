@@ -20,7 +20,7 @@ const WindowTint = () => {
         }
     }, []);
     return (
-        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden container mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
             
             <div className="pt-14">
                 <div className="py-24 sm:py-32 lg:pb-40">
@@ -31,7 +31,7 @@ const WindowTint = () => {
                             <div className="mt-10 items-center justify-center flex gap-x-6">
                                 <a ref={titleRef1} href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm
                                     hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
-                                    focus-visible:outline-gray-900">Get started</a>
+                                    focus-visible:outline-gray-900 my-8">Get started</a>
                             </div>
                         </div>
                         <div className="mt-10 sm:mt-5 lg:px-32">
@@ -50,19 +50,19 @@ const WindowTint = () => {
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Heat Reduction</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Window tinting can significantly reduce the amount of heat that enters your vehicle, making it more comfortable to drive and reducing the need for air conditioning.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Window tinting can significantly reduce the amount of heat that enters your vehicle, making it more comfortable to drive and reducing the need for air conditioning.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">UV Protection</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Tinted windows block up to 99% of harmful UV rays, protecting your skin from sun damage and preventing the vehicle's interior from fading and cracking.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Tinted windows block up to 99% of harmful UV rays, protecting your skin from sun damage and preventing the vehicle's interior from fading and cracking.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Glare Reduction</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Tints reduce glare from the sun and headlights, enhancing driving visibility and reducing eye strain.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Tints reduce glare from the sun and headlights, enhancing driving visibility and reducing eye strain.</dd>
                                     </div>
                                 </dl>
                                 <dl className="pt-12 lg:gap-36 md:grid-cols-3 text-lg border-t border-white/10 grid grid-cols-1 gap-12">
@@ -70,19 +70,19 @@ const WindowTint = () => {
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Increased Privacy</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Tinted windows provide added privacy by making it harder for outsiders to see inside your vehicle, protecting your belongings and personal space.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Tinted windows provide added privacy by making it harder for outsiders to see inside your vehicle, protecting your belongings and personal space.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Advanced Technology</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Tinted windows give your vehicle a sleek, stylish look, enhancing its overall appearance and potentially increasing its resale value.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Tinted windows give your vehicle a sleek, stylish look, enhancing its overall appearance and potentially increasing its resale value.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Enhanced appearance</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">These films are engineered at a microscopic level to ensure optimal performance without compromising visibility or aesthetics.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">These films are engineered at a microscopic level to ensure optimal performance without compromising visibility or aesthetics.</dd>
                                     </div>
                                 </dl>
                             </div>

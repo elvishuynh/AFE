@@ -21,7 +21,7 @@ const VinylWrap = () => {
     }, []);
 
     return (
-        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden container mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
             
             <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
@@ -32,10 +32,10 @@ const VinylWrap = () => {
                             <div className="mt-10 items-center justify-center flex gap-x-6">
                                 <a ref={titleRef1} href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm
                                     hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
-                                    focus-visible:outline-gray-900">Get started</a>
+                                    focus-visible:outline-gray-900 my-8">Get started</a>
                             </div>
                         </div>
-                        <div className="mt-10 sm:mt-5 lg:px-32">
+                        <div className="mt-10 max-w-lg mx-auto">
                             <img ref={imgRef}
                                 src="/image3.webp" alt="App screenshot" className="drop-shadow-2xl w-full h-auto rounded-md shadow-white"/>
                         </div>
@@ -51,19 +51,19 @@ const VinylWrap = () => {
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Paint Protection</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Vinyl wrap acts as a protective layer for your vehicle’s paint, shielding it from minor scratches, chips, and abrasions caused by road debris and environmental factors.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Vinyl wrap acts as a protective layer for your vehicle’s paint, shielding it from minor scratches, chips, and abrasions caused by road debris and environmental factors.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Customization</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Vinyl wraps come in a wide range of colors, textures, and finishes, including matte, gloss, satin, and metallic, allowing you to easily change your vehicle’s appearance to match your style.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Vinyl wraps come in a wide range of colors, textures, and finishes, including matte, gloss, satin, and metallic, allowing you to easily change your vehicle’s appearance to match your style.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Personalized For Your Vehicle</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Custom-cut from large rolls to fit the specific contours and
+                                        <dd className="mt-4 text-base text-gray-300">Custom-cut from large rolls to fit the specific contours and
                                             dimensions of your car's body panels. This precision ensures that the film covers the entire desired
                                             area without unnecessary overlaps or gaps.</dd>
                                     </div>
@@ -73,19 +73,19 @@ const VinylWrap = () => {
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Cost-Effective</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Compared to a full paint job, vinyl wrapping is a more affordable option for changing your vehicle's look while still providing a high-quality finish.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Compared to a full paint job, vinyl wrapping is a more affordable option for changing your vehicle's look while still providing a high-quality finish.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Reversibility</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Vinyl wraps can be removed without damaging the original paint, making it easy to revert to your vehicle’s factory color or change to a new design whenever you want.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Vinyl wraps can be removed without damaging the original paint, making it easy to revert to your vehicle’s factory color or change to a new design whenever you want.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
                                             <p lineheight="6" className="text-base font-medium text-white">Versatility</p>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Modern vinyl wraps utilize advanced adhesive technology and high-quality vinyl materials that conform seamlessly to the contours of your vehicle. This ensures a smooth, bubble-free finish that maintains its integrity over time.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Modern vinyl wraps utilize advanced adhesive technology and high-quality vinyl materials that conform seamlessly to the contours of your vehicle. This ensures a smooth, bubble-free finish that maintains its integrity over time.</dd>
                                     </div>
                                 </dl>
                             </div>

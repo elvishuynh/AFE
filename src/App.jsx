@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Route, Routes, BrowserRouter, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import Home from './Home.jsx';
 import StorePage from './pages/storePage';
 import SocialsPage from './pages/socialsPage';
@@ -12,6 +13,7 @@ import VinylWrap from './components/service/VinylWrap';
 import WindowTint from './components/service/WindowTint';
 import BrakeCaliper from './components/service/BrakeCaliperPaint';
 import PaintProtectionFilm from './components/service/PaintProtectionFilm';
+import PaintCorrection from './components/service/PaintCorrection';
 
 const App = () => {
     const location = useLocation();
@@ -58,12 +60,14 @@ const App = () => {
                 <Route path="/socials" element={<SocialsPage />} />
                 <Route path="/services/:serviceId" element={<DynamicServiceLoader />} />
                 <Route path="/paint-protection-film" element={<PaintProtectionFilm />} />
+                <Route path="/paint-correction" element={<PaintCorrection />} />
                 <Route path="/ceramic-coat" element={<CeramicCoat />} />
                 <Route path="/vinyl-wrap" element={<VinylWrap />} />
                 <Route path="/window-tint" element={<WindowTint />} />
                 <Route path="/brake-caliper-paint" element={<BrakeCaliper />} />
                 <Route path="/stars-in-the-ceiling" element={<StarsCeiling />} />
             </Routes>
+            <Footer />
         </div>
     );
 };
