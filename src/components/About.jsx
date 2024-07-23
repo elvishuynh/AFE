@@ -38,6 +38,9 @@ const About = () => {
             { ref: expertRef2, delay: 0.75 },
             { ref: locationRef, delay: 1 },
             { ref: chooseRef, delay: .75 },
+            { ref: imgRef1, delay: 1 },
+            { ref: imgRef2, delay: 1 },
+            { ref: imgRef3, delay: 1 },
             { ref: declarationRef, delay: 1 }
         ];
 
