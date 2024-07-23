@@ -7,9 +7,11 @@ import VinylWrap from './service/VinylWrap';
 import WindowTint from './service/WindowTint';
 import BrakeCaliperPaint from './service/BrakeCaliperPaint';
 import StarsCeiling from './service/StarsCeiling';
+import PaintCorrection from './service/PaintCorrection';
 
 const serviceComponents = {
   "paint-protection-film": PaintProtectionFilm,
+  "paint-correction": PaintCorrection,
   "ceramic-coat": CeramicCoat,
   "vinyl-wrap": VinylWrap,
   "window-tint": WindowTint,

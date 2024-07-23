@@ -28,7 +28,7 @@ const CeramicCoat = () => {
         };
     }, []);
     return (
-        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden container mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
             <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
@@ -38,7 +38,7 @@ const CeramicCoat = () => {
                             <div className="mt-10 items-center justify-center flex gap-x-6">
                                 <a ref={titleRef1} href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm
                                     hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
-                                    focus-visible:outline-gray-900">Get started</a>
+                                    focus-visible:outline-gray-900 my-8">Get started</a>
                             </div>
                         </div>
                         <div className="flex flex-col sm:flex-row justify-center items-stretch space-y-4 sm:space-y-0 sm:space-x-4 mt-10">
@@ -55,69 +55,72 @@ const CeramicCoat = () => {
                     </div>
                     <section className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
-                            <div className="space-y-6">
+                            <div className="space-y-6 text-center">
                                 <p className="text-3xl text-white lg:text-4xl font-bold">Benefits:</p>
                             </div>
                             <div className="mt-12 lg:gap-y-16 flex flex-col gap-y-8">
                                 <dl className="pt-12 md:grid-cols-3 lg:gap-36 text-lg border-t border-white/10 grid grid-cols-1 gap-12">
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Enhanced Durability</p>
+                                            <h2 lineheight="6" className="text-base font-medium text-white">Enhanced Durability</h2>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Ceramic coating provides a long-lasting protective layer that resists scratches, chemical stains, and oxidation, ensuring your vehicle's paint remains pristine for years.</dd>
+                                        <dd className="mt-4 text-base text-white">Ceramic Coating provides a long-lasting protective layer that resists scratches, chemical stains, and oxidation, ensuring your vehicle's paint remains pristine for years.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Hydrophobic Properties</p>
+                                            <h2 lineheight="6" className="text-base font-medium text-white">Hydrophobic Properties</h2>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Water beads up and rolls off, taking dirt and grime with it. This makes washing your vehicle easier and less frequent.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Ceramic Coating allows the water to bead up into tiny balls that roll off the surface of the paint and takes dirt and grime along with it. This makes washing your vehicle easier and less frequent.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">UV Protection</p>
+                                            <h2 lineheight="6" className="text-base font-medium text-white">UV Protection</h2>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Protect your vehicle's paint from harmful UV rays, which can cause fading and oxidation over time. Helps to maintain your car's color and shine.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Harmful UV rays can damage the paint which can cause fading and oxidation over time. Ceramic Coating provides protection against UV rays by preventing them from reaching the paint's layer.  This helps to maintain your car's color and shine.</dd>
                                     </div>
                                 </dl>
                                 <dl className="pt-12 lg:gap-36 md:grid-cols-3 text-lg border-t border-white/10 grid grid-cols-1 gap-12">
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Chemical Resistance</p>
+                                            <h2 lineheight="6" className="text-base font-medium text-white">Chemical Resistance</h2>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">The coating provides a robust shield against various chemicals, such as bird droppings, tree sap, and road salts, which can otherwise damage the paint.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Without Ceramic Coating your vehicle's paint is vulnerable to chemicals that can cause permanent damage to the paint.  Adding the Ceramic Coating will provide resistance and act as a shield to protect against chemicals that are found in bird droppings, tree sap, pollen, heavy pollution and road salts.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Ease of Cleaning</p>
+                                            <h2 lineheight="6" className="text-base font-medium text-white">Ease of Cleaning</h2>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">The smooth, non-stick surface of a ceramic coating makes it easier to remove dirt, grime, and contaminants, reducing the effort and time required to keep your car clean.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">The smooth, non-stick surface of Ceramic Coating makes the cleaning process much easier.  This reduces dirt, grime, and contaminants and helps keep your car looking clean and fresh.</dd>
                                     </div>
                                     <div>
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Nanotechnology</p>
+                                            <h2 lineheight="6" className="text-base font-medium text-white">Nanotechnology</h2>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">This technology ensures that the coating bonds at a molecular level, filling in the microscopic imperfections in the paint. This results in a smoother, more uniform surface.</dd>
+                                        <dd className="mt-4 text-base text-gray-300">Nanotechnology in Ceramic Coating ensures that the coating bonds at a molecular level, filling in the microscopic imperfections in the paint. This results in a smoother, more uniform surface.</dd>
                                     </div>
                                 </dl>
                             </div>
                         </div>
-                        <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
-                            <div className="space-y-6">
-                                <p className="text-3xl text-white lg:text-4xl font-bold">Additional options:</p>
-                            </div>
+                        <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl text-center">
                             <div className="mt-12 lg:gap-y-16 flex flex-col gap-y-8">
                                 <dl className="pt-12 md:grid-cols-2 lg:gap-36 text-lg border-t border-white/10 grid grid-cols-1 gap-12">
-                                    <div>
+                                    <div id="interior-coat">
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Interior Coating</p>
+                                            <h2 lineheight="6" className="flex items-center text-5xl font-extrabold dark:text-white py-4">Interior Coating</h2>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white">Ceramic coating for the interior of your car is a protective treatment that forms a durable, long-lasting layer over your car’s surfaces. This advanced coating is applied to materials such as leather, fabric, vinyl, and plastic, offering enhanced protection and aesthetic appeal.</dd>
+                                        <div className="w-full overflow-hidden rounded-lg">
+                                            <img src="/ceramic-coat-interior.webp" alt="Interior Coating" className="min-w-full min-h-full h-auto object-cover object-center" />
+                                        </div>
+                                        <figcaption className="mt-4 text-base text-white text-left">Ceramic Coating for the interior of your car is a protective treatment that forms a durable, long-lasting layer over your car’s surfaces. This advanced coating is applied to materials such as leather, fabric, vinyl, and plastic, offering enhanced protection and aesthetic appeal.</figcaption>
                                     </div>
-                                    <div>
+                                    <div id="window-coat">
                                         <dt className="items-center inline-flex gap-4">
-                                            <p lineheight="6" className="text-base font-medium text-white">Window Coating</p>
+                                            <h2 lineheight="6" className="flex items-center text-5xl font-extrabold dark:text-white py-4">Window Coating</h2>
                                         </dt>
-                                        <dd className="mt-4 text-base text-white"> Ceramic coating for your car's windows is a cutting-edge treatment that provides a protective layer to the glass surfaces of your vehicle. This advanced coating enhances visibility, durability, and overall performance of your windows.</dd>
+                                        <div className="w-full overflow-hidden rounded-lg">
+                                            <img src="/ceramic-coat-exterior.webp" alt="Exterior Coating" className="min-w-full min-h-full h-auto object-cover object-center" />
+                                        </div>
+                                        <figcaption className="mt-4 text-base text-white text-left"> Ceramic Coating for your car's windows is a cutting-edge treatment that provides a protective layer to the glass surfaces of your vehicle. This advanced coating enhances visibility, durability, and overall performance of your windows.</figcaption>
                                     </div>
                                 </dl>
                             </div>

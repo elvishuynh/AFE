@@ -1,17 +1,16 @@
 import { useRef, useState } from 'react';
 import { Link as RouterLink } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
 import { useLocation, useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import { CSSPlugin } from 'gsap/CSSPlugin';
 import { useGSAP } from '@gsap/react';
-import { scroller } from 'react-scroll';
 import NavDropdown from './NavDropdown';
 
 gsap.registerPlugin(SplitText, CSSPlugin);
 const servicesItems = [
-    { label: ' Paint Protection Film', link: '/paint-protection-film' },
+    { label: 'Paint Protection Film', link: '/paint-protection-film' },
+    { label: 'Paint Correction', link: '/paint-correction' },
     { label: 'Ceramic Coat', link: '/ceramic-coat' },
     { label: 'Vinyl Wrap', link: '/vinyl-wrap' },
     { label: 'Window Tint', link: '/window-tint' },
@@ -62,10 +61,7 @@ const Navbar = () => {
     }, [isOpen]);
 
     return (
-        <div className="flex flex-col items-center w-full">
-            <div className="w-full flex justify-center">
-                <img src="/AFE.webp" alt="AFE Logo" className="mt-4 w-24 h-auto" />
-            </div>
+        <div className="flex flex-col items-center w-full py-12">
             <div ref={navbarRef} className="navbar sticky top-0 w-full flex justify-between items-center px-4 py-1 z-[999] bg-black transition-all ease-out duration-500" style={{ height: '60px' }}>
                 <div className="links hidden md:flex justify-center font-azo-sans font-normal text-white" style={{ flexGrow: 3 }}>
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase" >
@@ -88,9 +84,9 @@ const Navbar = () => {
                     <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
                         <RouterLink to={"/store"} smooth={"easeInOutQuart"} duration={500}>Store</RouterLink>
                     </div>
-                    <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
+                    {/* <div className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase">
                         <RouterLink to={"/socials"} smooth={"easeInOutQuart"} duration={500}>Socials</RouterLink>
-                    </div>
+                    </div> */}
                 </div>
                 <div className="md:hidden flex items-center z-40">
                     <button onClick={() => setIsOpen(!isOpen)} className="text-white z-50">
@@ -125,9 +121,9 @@ const Navbar = () => {
                     <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
                         <RouterLink to={"/store"} smooth={"easeInOutQuart"} duration={300}>Store</RouterLink>
                     </div>
-                    <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase" >
+                    {/* <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase" >
                         <RouterLink to={"/socials"} smooth={"easeInOutQuart"} duration={300}>Socials</RouterLink>
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>
