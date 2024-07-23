@@ -20,7 +20,10 @@ const Hero = () => {
     }, []);
 
     return (
-        <section id="hero" className="container mx-auto h-full md:h-screen flex flex-col justify-center items-center pt-0 lg:pt-32 pb-2 md:pb-12 lg:pb-24 static text-white px-6 md:px-12 lg:px-24 xl:px-48">
+        <section id="hero" className="container mx-auto h-full md:h-screen flex flex-col justify-center items-center pt-0 pb-2 md:pb-12 lg:pb-24 static text-white px-6 md:px-12 lg:px-24 xl:px-48">
+            <div className="w-full flex justify-center my-12">
+                <img src="/AFE.webp" alt="AFE Logo" className="w-32 h-auto" />
+            </div>
             <h1 ref={titleRef1} className="text-3xl sm:text-4xl md:text-5xl font-azo-sans font-bold pb-8 text-center opacity-0">
                 AUTO FILM EXPERTS
             </h1>
