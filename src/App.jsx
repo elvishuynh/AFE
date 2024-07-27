@@ -14,6 +14,8 @@ import WindowTint from './components/service/WindowTint';
 import BrakeCaliper from './components/service/BrakeCaliperPaint';
 import PaintProtectionFilm from './components/service/PaintProtectionFilm';
 import PaintCorrection from './components/service/PaintCorrection';
+import OfferVideo from './components/service/OfferVideo.jsx';
+import Logo from './components/Logo.jsx';
 
 const App = () => {
     const location = useLocation();
@@ -51,6 +53,7 @@ const App = () => {
     return (
         <div className="relative bg-black min-h-screen min-w-[100vw] w-full h-full">
             <Navbar className="top-0 w-full z-49" />
+            <Logo />
             <Routes>
                 <Route path="/" element={<Home />} exact />
                 <Route path="/about" element={<Home />} exact />
@@ -66,6 +69,7 @@ const App = () => {
                 <Route path="/window-tint" element={<WindowTint />} />
                 <Route path="/brake-caliper-paint" element={<BrakeCaliper />} />
                 <Route path="/stars-in-the-ceiling" element={<StarsCeiling />} />
+                <Route path="/paint-protection-offer" element={<OfferVideo />} />
             </Routes>
             <Footer />
         </div>
