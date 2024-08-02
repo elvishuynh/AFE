@@ -43,7 +43,7 @@ const CeramicCoat = () => {
                         </div>
                         <div className="flex flex-col sm:flex-row justify-center items-stretch space-y-4 sm:space-y-0 sm:space-x-4 mt-10">
                             <div className="sm:w-1/3 w-full overflow-hidden rounded-lg">
-                                <img src="/shop6.webp" alt="Partial Front Coverage" className="min-w-full min-h-full h-auto object-cover object-center" />
+                                <img src="/shop6.webp" alt="Partial Front Coverage" className="min-w-full min-h-full h-auto object-cover object-left" />
                             </div>
                             <section>
                                 <video ref={videoRef} src="/afe_tiktok.mp4" controls autoPlay muted />
