@@ -89,12 +89,12 @@ const Services = () => {
   }, []);
 
   return (
-    <div className="container mx-auto pt-10 pb-10 pr-5 pl-5 text-white px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/10">
-      <h1 className="text-4xl sm:text-5xl md:text-6xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Services</h1>
-      <div className="space-y-8 p-4 md:p-8">
-        <section className="flex flex-col lg:flex-row-reverse items-center space-y-4 lg:space-y-0 lg:space-x-4 p-4">
-          <div className="flex-1 text-center md:text-left">
-            <h1 ref={paintProtectionRef} className="text-3xl lg:text-4xl xl:text-5xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Paint Protection Film</h1>
+    <div id="services" className="container mx-auto pt-10 pb-10 pr-5 pl-5 text-white px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/10">
+      <h1 id="services-title" className="text-4xl sm:text-5xl md:text-6xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Services</h1>
+      <div id="services-list" className="space-y-8 p-4 md:p-8">
+        <section id="services-ppf" className="flex flex-col lg:flex-row-reverse items-center space-y-4 lg:space-y-0 lg:space-x-4 p-4">
+          <div id="services-ppf-content" className="flex-1 text-center md:text-left">
+            <h1 ref={paintProtectionRef} id="services-ppf-title" className="text-3xl lg:text-4xl xl:text-5xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Paint Protection Film</h1>
             <p className="text-gray-300 text-sm sm:text-base md:text-xl">
               Protecting your original paint is the single most effective thing you can do to safeguard your investment. Our Ultimate Plus Paint Protection Film™ is a high-gloss, self-healing film that offers protection from rock chips, scratches, UV damage, and daily driving. All it takes is one rock chip to make you realize how important clear bra paint protection is. Add a few more rock chips and you'd be wishing you had done it sooner. On luxury vehicles, high-end sports cars and exotics, paint protection film is an absolute no-brainer.
             </p>
@@ -102,14 +102,14 @@ const Services = () => {
               <span className="w-full">Learn More</span>
             </a>
           </div>
-          <div className="reveal flex-none w-full lg:w-1/2">
+          <div id="services-ppf-image" className="reveal flex-none w-full lg:w-1/2">
             <img ref={imageRef1} src="./DSC02017.webp" alt="Paint Protection Film" className="object-scale-down max-h-96 w-full lg:w-9/12 rounded-lg shadow-lg mx-auto" />
           </div>
         </section>
 
-        <section className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 p-4">
-          <div className="flex-1 text-center md:text-right">
-            <h1 ref={ceramicCoatingRef} className="text-3xl lg:text-4xl xl:text-5xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Ceramic Coating</h1>
+        <section id="services-ceramic" className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 p-4">
+          <div id="services-ceramic-content" className="flex-1 text-center md:text-right">
+            <h1 ref={ceramicCoatingRef} id="services-ceramic-title" className="text-3xl lg:text-4xl xl:text-5xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Ceramic Coating</h1>
             <p className="text-gray-300 text-sm sm:text-base md:text-xl">
               Elevate your vehicle's appearance and fortify its defenses with our cutting-edge Ceramic Pro Coating™. This state-of-the-art, nano-ceramic technology forms an impenetrable layer that enhances gloss, depth, and clarity while providing unrivaled protection against UV rays, chemical contaminants, and minor scratches. All it takes is one encounter with road grime or bird droppings to make you realize how crucial a ceramic coating is for maintaining your vehicle's pristine look. Experience a few more instances of struggling to remove stubborn contaminants, and you'd be wishing you had taken action sooner. On luxury vehicles, high-end sports cars, and exotics, where a flawless appearance is non-negotiable, our Ceramic Pro Coating™ is an absolute game-changer.
             </p>
@@ -117,14 +117,14 @@ const Services = () => {
               <span className="w-full">Learn More</span>
             </a>
           </div>
-          <div className="reveal flex-none w-full lg:w-1/2">
+          <div id="services-ceramic-image" className="reveal flex-none w-full lg:w-1/2">
             <img ref={imageRef2} src="./image1.webp" alt="Ceramic Coating" className="max-h-96 max-h-96 w-full lg:w-9/12 rounded-lg shadow-lg mx-auto" />
           </div>
         </section>
 
-        <section className="flex flex-col lg:flex-row-reverse items-center space-y-4 lg:space-y-0 lg:space-x-4 p-4">
-          <div className="flex-1 text-center md:text-left">
-            <h1 ref={paintCorrectionRef} className="text-3xl lg:text-4xl xl:text-5xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Paint Correction</h1>
+        <section id="services-correction" className="flex flex-col lg:flex-row-reverse items-center space-y-4 lg:space-y-0 lg:space-x-4 p-4">
+          <div id="services-correction-content" className="flex-1 text-center md:text-left">
+            <h1 ref={paintCorrectionRef} id="services-correction-title" className="text-3xl lg:text-4xl xl:text-5xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Paint Correction</h1>
             <p className="text-gray-300 text-sm sm:text-base md:text-xl">
               Restore your vehicle's paint to its original brilliance and eliminate unsightly imperfections with our meticulous Paint Correction service. Our skilled technicians use advanced techniques and top-of-the-line products to meticulously remove swirl marks, scratches, oxidation, and other blemishes, leaving your vehicle with a showroom-quality finish that radiates perfection. All it takes is one glance at a dull, marred surface to make you realize how vital professional paint correction is for showcasing your vehicle's true beauty. Endure a few more instances of cringing at the sight of your vehicle's lackluster appearance, and you'd be wishing you had addressed the issue sooner. On luxury vehicles, high-end sports cars, and exotics, where a pristine, head-turning appearance is essential, our Paint Correction service is an absolute necessity for maintaining your vehicle's value and visual appeal.
             </p>
@@ -132,14 +132,14 @@ const Services = () => {
               <span className="w-full">Learn More</span>
             </a>
           </div>
-          <div className="reveal flex-none w-full lg:w-1/2">
+          <div id="services-correction-image" className="reveal flex-none w-full lg:w-1/2">
             <img ref={imageRef3} src="./image4.webp" alt="Paint Correction" className="object-scale-down max-h-96 w-full lg:w-9/12 rounded-lg shadow-lg mx-auto" />
           </div>
         </section>
 
-        <section className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 p-4">
-          <div className="flex-1 text-center md:text-right">
-            <h1 ref={windowTintingRef} className="text-3xl lg:text-4xl xl:text-5xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Window Tinting</h1>
+        <section id="services-tint" className="flex flex-col lg:flex-row items-center space-y-4 lg:space-y-0 lg:space-x-4 p-4">
+          <div id="services-tint-content" className="flex-1 text-center md:text-right">
+            <h1 ref={windowTintingRef} id="services-tint-title" className="text-3xl lg:text-4xl xl:text-5xl font-azo-sans font-bold py-8 text-center" style={{ wordBreak: "keep-all" }}>Window Tinting</h1>
             <p className="text-gray-300 text-sm sm:text-base md:text-xl">
               Safeguarding your vehicle's interior and enhancing your driving experience is as simple as investing in our Ultimate Plus Window Tinting. This high-performance, precision-cut window film offers unparalleled protection from harsh UV rays, reduces glare for improved visibility, and helps regulate interior temperatures for a more comfortable ride. All it takes is one scorching summer day to make you realize how essential quality window tinting is. Add a few more uncomfortably warm drives and you'd be wishing you had done it sooner. On luxury vehicles, high-end sports cars, and exotics, where comfort and style are paramount, our window tinting solution is an absolute must-have.
             </p>
@@ -147,7 +147,7 @@ const Services = () => {
               <span className="w-full">Learn More</span>
             </a>
           </div>
-          <div className="reveal flex-none w-full lg:w-1/2">
+          <div id="services-tint-image" className="reveal flex-none w-full lg:w-1/2">
             <img ref={imageRef4} src="./image2.webp" alt="Window Tinting" className="max-h-96 w-full lg:w-9/12 rounded-lg shadow-lg mx-auto" />
           </div>
         </section>

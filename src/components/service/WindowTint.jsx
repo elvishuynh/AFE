@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
+import ServiceContactCard from '../ServiceContactCard';
 
 const WindowTint = () => {
     useScrollRestoration();
@@ -85,7 +86,10 @@ const WindowTint = () => {
                             <div className="mt-10 items-center justify-center flex gap-x-6">
                                 <a ref={titleRef1} href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm
                                     hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
-                                    focus-visible:outline-gray-900 my-8">Get started</a>
+                                    focus-visible:outline-gray-900 my-8">Book a Tint Consultation</a>
+                            </div>
+                            <div className="mt-8">
+                                <ServiceContactCard />
                             </div>
                         </div>
                         <div className="mt-10 sm:mt-5 lg:px-32">
@@ -142,6 +146,19 @@ const WindowTint = () => {
                             </div>
                         </div>
                     </section>
+                    <div className="flex flex-col items-center justify-center py-8 gap-3">
+                        <a href="/contact" className="rounded-md bg-red-600 hover:bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors">Book a Tint Consultation</a>
+                        <div className="text-xs text-gray-400 flex items-center gap-3">
+                            <span className="flex items-center gap-1"><span className="text-yellow-400">★</span> 5-Star Rated</span>
+                            <span>•</span>
+                            <span>Premium Tint Film</span>
+                            <span>•</span>
+                            <span>Lifetime Warranty</span>
+                        </div>
+                    </div>
+                    <div className="flex justify-center py-8">
+                        <ServiceContactCard />
+                    </div>
                 </div>
             </div>
         </section>
