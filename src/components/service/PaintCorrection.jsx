@@ -97,16 +97,6 @@ const PaintCorrection = () => {
                                 src="/paint-correction-1.webp" alt="Paint Correction 1" />
                         </div>
                     </div>
-                    <section className="bg-black mx-auto px-8 py-12 xl:py-24 max-w-screen-2xlt" ref={locationRef}>
-                        <p ref={titleRef2} className="mt-6 text-lg text-gray-300">Paint correction is a meticulous process of removing imperfections from your car's paintwork. Unlike simple polishing or waxing, paint correction involves the use of specialized techniques and equipment to remove surface defects, such as:</p>
-                        <ol ref={titleRef2} className="mt-6 text-lg text-gray-300">
-                            <li>- Swirl marks</li>
-                            <li>- Light scratches</li>
-                            <li>- Water spots</li>
-                            <li>- Oxidations</li>
-                            <li>- Holograms</li>
-                        </ol>
-                    </section>
                     <section className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6">
