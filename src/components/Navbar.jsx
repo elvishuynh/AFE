@@ -11,11 +11,11 @@ gsap.registerPlugin(SplitText, CSSPlugin);
 const servicesItems = [
     { label: 'Paint Protection Film', link: '/paint-protection-film' },
     { label: 'Paint Correction', link: '/paint-correction' },
-    { label: 'Ceramic Coat', link: '/ceramic-coat' },
+    { label: 'Ceramic Coating', link: '/ceramic-coating' },
     { label: 'Vinyl Wrap', link: '/vinyl-wrap' },
     { label: 'Window Tint', link: '/window-tint' },
     { label: 'Brake Caliper Paint', link: '/brake-caliper-paint' },
-    { label: 'Stars in the Ceiling', link: '/stars-in-the-ceiling' },
+    { label: 'Stars in the Ceiling', link: '/star-ceiling' },
 ];
 
 const Navbar = () => {
