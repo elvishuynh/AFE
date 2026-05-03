@@ -11,12 +11,12 @@ import NavDropdown from './NavDropdown';
 
 gsap.registerPlugin(SplitText, CSSPlugin);
 const servicesItems = [
-    { label: ' Paint Protection Film', link: '/ppf' },
-    { label: 'Ceramic Coating', link: '/cc' },
-    { label: 'Vinyl Wrapping', link: '/vw' },
-    { label: 'Window Tinting', link: '/wt' },
-    { label: 'Brake Caliper Paint', link: '/bcp' },
-    { label: 'Stars in the Ceiling', link: '/stars' },
+    { label: ' Paint Protection Film', link: '/paint-protection-film' },
+    { label: 'Ceramic Coating', link: '/ceramic-coating' },
+    { label: 'Vinyl Wrapping', link: '/vinyl-wrapping' },
+    { label: 'Window Tinting', link: '/window-tinting' },
+    { label: 'Brake Caliper Paint', link: '/brake-caliper-paint' },
+    { label: 'Stars in the Ceiling', link: '/star-ceiling' },
   ];
 
 const Navbar = () => {

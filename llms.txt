@@ -1,0 +1,57 @@
+# Auto Film Experts - LLM Information File
+
+## Company Overview
+Auto Film Experts is a professional automotive protection and customization service located in San Pedro, California. We specialize in paint protection film (PPF) installation, ceramic coating, vinyl wrapping, window tinting, brake caliper painting, and custom interior enhancements.
+
+## Business Information
+- **Name**: Auto Film Experts
+- **Address**: 1208 N Gaffey St, San Pedro, CA 90731
+- **Phone**: (310) 346-0336
+- **Website**: https://autofilmsxperts.com
+- **Service Area**: San Pedro and surrounding areas
+
+## Services Offered
+1. **Paint Protection Film (PPF)** - Self-healing clear bra protection
+2. **Ceramic Coating** - Durable hydrophobic paint protection
+3. **Vinyl Wrapping** - Custom color and finish customization
+4. **Window Tinting** - UV protection, heat reduction, privacy
+5. **Brake Caliper Painting** - Custom colored brake calipers
+6. **Star Ceiling Installation** - Luxury interior ambient lighting
+
+## Key Features
+- Professional installation with expert technicians
+- Premium materials and advanced technology
+- Custom-cut applications for perfect fit
+- Self-healing and long-lasting protection
+- Comprehensive warranty and maintenance support
+
+## Contact Methods
+- **Phone**: (310) 346-0336
+- **In-Person**: 1208 N Gaffey St, San Pedro, CA 90731
+- **Website**: https://autofilmsxperts.com/#contact
+
+## Technology Stack
+- Frontend: React 18 with Vite
+- Styling: Tailwind CSS
+- Routing: React Router DOM v6
+- Animations: GSAP
+- Forms: React Hook Form
+- SEO: React Helmet Async
+- Meta information: Structured data (JSON-LD schemas)
+
+## SEO & Digital Presence
+- Dynamic meta tags for all service pages
+- Comprehensive structured data markup
+- Local business optimization
+- FAQ schemas for featured snippets
+- Sitemap and robots.txt configured
+- Clean, SEO-friendly URL structure
+- Mobile-responsive design
+
+## Recent Updates (May 2026)
+- Implemented react-helmet-async for dynamic meta tags
+- Added comprehensive structured data (Organization, LocalBusiness, Service, BreadcrumbList, FAQPage)
+- Created sitemap.xml and robots.txt
+- Updated URLs to use human-readable service names with hyphens
+- Expanded PPF page with customer testimonials and detailed FAQs
+- Added home page and contact page structured data
