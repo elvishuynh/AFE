@@ -9,12 +9,12 @@ import BrakeCaliper from './service/BrakeCaliper';
 import StarsCeiling from './service/StarsCeiling';
 
 const serviceComponents = {
-  ppf: Ppf,
-  cc: CeramicCoating,
-  vw: VinylWrapping,
-  wt: WindowTinting,
-  bcp: BrakeCaliper,
-  stars: StarsCeiling,
+  'paint-protection-film': Ppf,
+  'ceramic-coating': CeramicCoating,
+  'vinyl-wrapping': VinylWrapping,
+  'window-tinting': WindowTinting,
+  'brake-caliper-paint': BrakeCaliper,
+  'star-ceiling': StarsCeiling,
 };
 
 const DynamicServiceLoader = () => {

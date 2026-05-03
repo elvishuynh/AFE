@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
 
@@ -21,9 +22,62 @@ const VinylWrapping = () => {
     }, []);
 
     return (
-        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
-            
-            <div className="pt-14">
+        <>
+            <Helmet>
+                <title>Professional Vinyl Wrapping Services | Auto Film Experts</title>
+                <meta name="description" content="Transform your vehicle with custom vinyl wrapping. Paint protection, endless color options, reversible design. Expert vinyl wrap installation services." />
+                <meta name="keywords" content="vinyl wrapping, vehicle wrap, custom vinyl, paint protection, car customization, reversible wrap, matte finish, gloss finish" />
+                <meta property="og:title" content="Professional Vinyl Wrapping Services | Auto Film Experts" />
+                <meta property="og:description" content="Transform your vehicle with custom vinyl wrapping. Paint protection, endless color options, reversible design." />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Professional Vinyl Wrapping Services | Auto Film Experts" />
+                <meta name="twitter:description" content="Transform your vehicle with custom vinyl wrapping. Paint protection, endless color options." />
+                <link rel="canonical" href="https://autofilmsxperts.com/services/vinyl-wrapping" />
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": "Vinyl Wrapping Installation",
+                    "description": "Professional vinyl wrap installation services providing paint protection, customization, and reversible design for vehicles.",
+                    "provider": {
+                        "@type": "LocalBusiness",
+                        "name": "Auto Film Experts",
+                        "url": "https://autofilmsxperts.com"
+                    },
+                    "serviceType": "Automotive Customization",
+                    "areaServed": "Local"
+                })}
+                </script>
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://autofilmsxperts.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://autofilmsxperts.com/#services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Vinyl Wrapping",
+                            "item": "https://autofilmsxperts.com/services/vinyl-wrapping"
+                        }
+                    ]
+                })}
+                </script>
+            </Helmet>
+            <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+                <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
                         <div className="mx-auto text-center max-w-2xl">
@@ -94,6 +148,7 @@ const VinylWrapping = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
 
@@ -31,8 +32,62 @@ const CeramicCoating = () => {
         };
     }, []);
     return (
-        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
-            <div className="pt-14">
+        <>
+            <Helmet>
+                <title>Professional Ceramic Coating Services | Auto Film Experts</title>
+                <meta name="description" content="Protect your vehicle with premium ceramic coating. Durable glossy shield, hydrophobic, UV protection, chemical resistance. Expert ceramic coating installation services." />
+                <meta name="keywords" content="ceramic coating, paint protection, hydrophobic coating, UV protection, auto detailing, glossy finish, durability" />
+                <meta property="og:title" content="Professional Ceramic Coating Services | Auto Film Experts" />
+                <meta property="og:description" content="Protect your vehicle with premium ceramic coating. Durable glossy shield, hydrophobic, UV protection." />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Professional Ceramic Coating Services | Auto Film Experts" />
+                <meta name="twitter:description" content="Protect your vehicle with premium ceramic coating. Durable glossy shield, hydrophobic, UV protection." />
+                <link rel="canonical" href="https://autofilmsxperts.com/services/ceramic-coating" />
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": "Ceramic Coating Installation",
+                    "description": "Professional ceramic coating installation services providing durability, hydrophobic protection, and UV resistance for vehicles.",
+                    "provider": {
+                        "@type": "LocalBusiness",
+                        "name": "Auto Film Experts",
+                        "url": "https://autofilmsxperts.com"
+                    },
+                    "serviceType": "Automotive Protection",
+                    "areaServed": "Local"
+                })}
+                </script>
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://autofilmsxperts.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://autofilmsxperts.com/#services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Ceramic Coating",
+                            "item": "https://autofilmsxperts.com/services/ceramic-coating"
+                        }
+                    ]
+                })}
+                </script>
+            </Helmet>
+            <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+                <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
                         <div className="mx-auto text-center max-w-2xl">
@@ -132,6 +187,7 @@ const CeramicCoating = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

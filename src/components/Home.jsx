@@ -1,5 +1,6 @@
 // src/components/Home.jsx
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { gsap } from 'gsap';
 
 const Home = ({ isSplashActive }) => {
@@ -22,7 +23,67 @@ const Home = ({ isSplashActive }) => {
     }, [isSplashActive]);
 
     return (
-        <section id="home" className="h-full md:h-screen flex flex-col justify-center items-center pt-0 md:pt-24 lg:pt-52 pb-2 md:pb-24 lg:pb-32 static text-white">
+        <>
+            <Helmet>
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Organization",
+                    "name": "Auto Film Experts",
+                    "url": "https://autofilmsxperts.com",
+                    "logo": "https://autofilmsxperts.com/AFE.webp",
+                    "description": "Professional automotive protection services specializing in paint protection film, ceramic coating, vinyl wrapping, window tinting, and custom vehicle enhancements.",
+                    "sameAs": [
+                        "https://www.instagram.com/autofilmexperts",
+                        "https://www.tiktok.com/@autofilmexperts"
+                    ],
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "Customer Service",
+                        "telephone": "+1-310-346-0336",
+                        "email": "info@autofilmsxperts.com"
+                    }
+                })}
+                </script>
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "LocalBusiness",
+                    "name": "Auto Film Experts",
+                    "image": "https://autofilmsxperts.com/AFE.webp",
+                    "description": "Professional automotive protection and customization services in San Pedro, California.",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "streetAddress": "1208 N Gaffey St",
+                        "addressLocality": "San Pedro",
+                        "addressRegion": "CA",
+                        "postalCode": "90731",
+                        "addressCountry": "US"
+                    },
+                    "geo": {
+                        "@type": "GeoCoordinates",
+                        "latitude": "33.7437",
+                        "longitude": "-118.2912"
+                    },
+                    "url": "https://autofilmsxperts.com",
+                    "telephone": "+1-310-346-0336",
+                    "priceRange": "$$",
+                    "areaServed": {
+                        "@type": "City",
+                        "name": "San Pedro"
+                    },
+                    "serviceType": [
+                        "Paint Protection Film Installation",
+                        "Ceramic Coating",
+                        "Vinyl Wrapping",
+                        "Window Tinting",
+                        "Brake Caliper Painting",
+                        "Custom Interior Design"
+                    ]
+                })}
+                </script>
+            </Helmet>
+            <section id="home" className="h-full md:h-screen flex flex-col justify-center items-center pt-0 md:pt-24 lg:pt-52 pb-2 md:pb-24 lg:pb-32 static text-white">
             <h1 ref={titleRef1} className="text-5xl md:text-7xl font-azo-sans font-bold pb-8 text-center opacity-0">
                 AUTO FILM EXPERTS
             </h1>
@@ -39,6 +100,7 @@ const Home = ({ isSplashActive }) => {
                 </p>
             </div>
         </section>
+        </>
     );
 };
 

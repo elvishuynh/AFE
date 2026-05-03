@@ -59,7 +59,7 @@ const Services = () => {
         <div className="container mx-auto pt-10 pb-10 pr-10 pl-10 text-white">
            <div className="mt-auto mr-auto mb-auto ml-auto pt-10 pb-10 pr-10 pl-10 max-w-6xl">
   <div className="grid divide-y border-2">
-    <Link to="/services/ppf" className="items-center px-5 py-4 flex gap-2.5">
+    <Link to="/services/paint-protection-film" className="items-center px-5 py-4 flex gap-2.5">
       <span className="items-center justify-center flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 24 24" fill="none" className="w-full
             h-full"><path d="M7.20039 12.0001C7.20039 13.3256 6.12587 14.4001 4.80039 14.4001C3.47491 14.4001 2.40039
@@ -77,7 +77,7 @@ const Services = () => {
       <div className="flex gap-2">
         <span className="relative"></span>
       </div>
-      <Link to="/services/cc" className="items-center px-5 py-4 flex gap-2.5">
+      <Link to="/services/ceramic-coating" className="items-center px-5 py-4 flex gap-2.5">
       <span className="items-center justify-center flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 24 24" fill="none" className="w-full
             h-full"><path d="M7.20039 12.0001C7.20039 13.3256 6.12587 14.4001 4.80039 14.4001C3.47491 14.4001 2.40039
@@ -95,7 +95,7 @@ const Services = () => {
       <div className="flex gap-2">
         <span className="relative"></span>
       </div>
-    <Link to="/services/vw" className="items-center px-5 py-4 flex gap-2.5">
+    <Link to="/services/vinyl-wrapping" className="items-center px-5 py-4 flex gap-2.5">
       <span className="items-center justify-center flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 24 24" fill="none" className="w-full
             h-full"><path d="M7.20039 12.0001C7.20039 13.3256 6.12587 14.4001 4.80039 14.4001C3.47491 14.4001 2.40039
@@ -113,7 +113,7 @@ const Services = () => {
       <div className="flex gap-2">
         <span className="relative"></span>
       </div>
-    <Link to="/services/wt" className="items-center px-5 py-4 flex gap-2.5">
+    <Link to="/services/window-tinting" className="items-center px-5 py-4 flex gap-2.5">
       <span className="items-center justify-center flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 24 24" fill="none" className="w-full
             h-full"><path d="M7.20039 12.0001C7.20039 13.3256 6.12587 14.4001 4.80039 14.4001C3.47491 14.4001 2.40039
@@ -131,7 +131,7 @@ const Services = () => {
       <div className="flex gap-2">
         <span className="relative"></span>
       </div>
-    <Link to="/services/bcp" className="items-center px-5 py-4 flex gap-2.5">
+    <Link to="/services/brake-caliper-paint" className="items-center px-5 py-4 flex gap-2.5">
       <span className="items-center justify-center flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 24 24" fill="none" className="w-full
             h-full"><path d="M7.20039 12.0001C7.20039 13.3256 6.12587 14.4001 4.80039 14.4001C3.47491 14.4001 2.40039
@@ -149,7 +149,7 @@ const Services = () => {
       <div className="flex gap-2">
         <span className="relative"></span>
       </div>
-    <Link to="/services/stars" className="items-center px-5 py-4 flex gap-2.5">
+    <Link to="/services/star-ceiling" className="items-center px-5 py-4 flex gap-2.5">
       <span className="items-center justify-center flex">
         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewbox="0 0 24 24" fill="none" className="w-full
             h-full"><path d="M7.20039 12.0001C7.20039 13.3256 6.12587 14.4001 4.80039 14.4001C3.47491 14.4001 2.40039

@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -82,6 +83,27 @@ const Contact = () => {
 
     return (
         <>
+            <Helmet>
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "ContactPage",
+                    "name": "Contact Auto Film Experts",
+                    "description": "Get in touch with Auto Film Experts for inquiries about our automotive protection and customization services.",
+                    "url": "https://autofilmsxperts.com/#contact",
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "Customer Service",
+                        "telephone": "+1-310-346-0336",
+                        "email": "info@autofilmsxperts.com"
+                    },
+                    "potentialAction": {
+                        "@type": "CommunicateAction",
+                        "name": "Contact Form"
+                    }
+                })}
+                </script>
+            </Helmet>
             <h1 ref={contactTitleRef} className="text-5xl font-azo-sans font-bold py-8 text-center text-white">Contact Us!</h1>
             <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white p-8 rounded-lg shadow-md w-9/12 mx-auto">
                 <div className="form-group flex space-x-4">
