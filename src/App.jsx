@@ -3,6 +3,7 @@ import { Route, Routes, BrowserRouter, useLocation } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import StickyContactBar from './components/StickyContactBar';
 import Home from './Home.jsx';
 import StorePage from './pages/storePage';
 import SocialsPage from './pages/socialsPage';
@@ -51,9 +52,8 @@ const App = () => {
     }, [location]);
 
     return (
-        <div className="relative bg-black min-h-screen min-w-[100vw] w-full h-full">
+        <div className="relative bg-black min-h-screen min-w-[100vw] w-full h-full pb-16 md:pb-0">
             <Navbar className="top-0 w-full z-49" />
-            <Logo />
             <Routes>
                 <Route path="/" element={<Home />} exact />
                 <Route path="/about" element={<Home />} exact />
@@ -72,6 +72,7 @@ const App = () => {
                 <Route path="/paint-protection-offer" element={<OfferVideo />} />
             </Routes>
             <Footer />
+            <StickyContactBar />
         </div>
     );
 };

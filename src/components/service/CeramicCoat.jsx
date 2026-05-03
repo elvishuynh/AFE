@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
+import ServiceContactCard from '../ServiceContactCard';
 
 const CeramicCoat = () => {
     useScrollRestoration();
@@ -38,7 +39,10 @@ const CeramicCoat = () => {
                             <div className="mt-10 items-center justify-center flex gap-x-6">
                                 <a ref={titleRef1} href="/contact" className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-black shadow-sm
                                     hover:bg-gray-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2
-                                    focus-visible:outline-gray-900 my-8">Get started</a>
+                                    focus-visible:outline-gray-900 my-8">Request Ceramic Coating Pricing</a>
+                            </div>
+                            <div className="mt-8">
+                                <ServiceContactCard />
                             </div>
                         </div>
                         <div className="flex flex-col sm:flex-row justify-center items-stretch space-y-4 sm:space-y-0 sm:space-x-4 mt-10">
@@ -101,7 +105,18 @@ const CeramicCoat = () => {
                                 </dl>
                             </div>
                         </div>
-                        <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl text-center">
+                    </section>
+                    <div className="flex flex-col items-center justify-center py-8 gap-3">
+                        <a href="/contact" className="rounded-md bg-red-600 hover:bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors">Request Ceramic Coating Pricing</a>
+                        <div className="text-xs text-gray-400 flex items-center gap-3">
+                            <span className="flex items-center gap-1"><span className="text-yellow-400">★</span> 5-Star Rated</span>
+                            <span>•</span>
+                            <span>5-Year Warranty</span>
+                            <span>•</span>
+                            <span>Premium Ceramic Coating</span>
+                        </div>
+                    </div>
+                    <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl text-center">
                             <div className="mt-12 lg:gap-y-16 flex flex-col gap-y-8">
                                 <dl className="pt-12 md:grid-cols-2 lg:gap-36 text-lg border-t border-white/10 grid grid-cols-1 gap-12">
                                     <div id="interior-coat">
@@ -125,8 +140,20 @@ const CeramicCoat = () => {
                                 </dl>
                             </div>
                         </div>
-                    </section>
-                </div>
+                    </div>
+                    <div className="flex flex-col items-center justify-center py-8 gap-3">
+                        <a href="/contact" className="rounded-md bg-red-600 hover:bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors">Request Ceramic Coating Pricing</a>
+                        <div className="text-xs text-gray-400 flex items-center gap-3">
+                            <span className="flex items-center gap-1"><span className="text-yellow-400">★</span> 5-Star Rated</span>
+                            <span>•</span>
+                            <span>5-Year Warranty</span>
+                            <span>•</span>
+                            <span>Premium Ceramic Coating</span>
+                        </div>
+                    </div>
+                    <div className="flex justify-center py-8">
+                        <ServiceContactCard />
+                    </div>
             </div>
         </section>
     );
