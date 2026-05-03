@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
 
@@ -20,9 +21,62 @@ const StarsCeiling = () => {
         }
     }, []);
     return (
-        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden container mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
-            
-            <div className="pt-14">
+        <>
+            <Helmet>
+                <title>Star Ceiling Installation | Luxury Vehicle Interior | Auto Film Experts</title>
+                <meta name="description" content="Transform your vehicle interior with stunning star ceiling installation. Customizable lighting, luxurious ambiance, calming effect. Expert star ceiling services." />
+                <meta name="keywords" content="star ceiling, vehicle interior, luxurious lighting, customizable ceiling, ambient lighting, car interior upgrade" />
+                <meta property="og:title" content="Star Ceiling Installation | Luxury Vehicle Interior | Auto Film Experts" />
+                <meta property="og:description" content="Transform your vehicle interior with stunning star ceiling installation. Customizable lighting, luxurious ambiance." />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Star Ceiling Installation | Luxury Vehicle Interior | Auto Film Experts" />
+                <meta name="twitter:description" content="Transform your vehicle interior with stunning star ceiling installation. Customizable lighting, luxurious ambiance." />
+                <link rel="canonical" href="https://autofilmsxperts.com/services/star-ceiling" />
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": "Star Ceiling Installation",
+                    "description": "Professional star ceiling installation services providing luxury interior ambiance with customizable lighting for vehicles.",
+                    "provider": {
+                        "@type": "LocalBusiness",
+                        "name": "Auto Film Experts",
+                        "url": "https://autofilmsxperts.com"
+                    },
+                    "serviceType": "Automotive Interior Upgrade",
+                    "areaServed": "Local"
+                })}
+                </script>
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://autofilmsxperts.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://autofilmsxperts.com/#services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Star Ceiling",
+                            "item": "https://autofilmsxperts.com/services/star-ceiling"
+                        }
+                    ]
+                })}
+                </script>
+            </Helmet>
+            <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+                <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
                         <div className="mx-auto text-center max-w-2xl">
@@ -71,6 +125,7 @@ const StarsCeiling = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 
