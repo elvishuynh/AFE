@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useForm } from 'react-hook-form';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -113,43 +114,29 @@ const Contact = () => {
     };
 
     return (
-        <div id="contact" className="container mx-auto px-6 md:px-12 lg:px-24 xl:px-48 border-t border-white/10">
-            <div id="contact-description" className="my-16">
-                <h1 ref={contactTitleRef} className="text-3xl sm:text-4xl md:text-5xl font-azo-sans font-bold py-8 text-center text-white">Contact Us</h1>
-            </div>
-            <div className="mx-auto px-8 max-w-screen-2xl text-center">
-                <p ref={descriptionRef1} className="text-gray-300 text-sm sm:text-base md:text-xl text-center pb-12 xl:pb-24">
-                    We believe in building lasting relationships with our customers, founded on trust, integrity, and transparent communication.
-                </p>
-                <div className="lg:gap-y-16 flex flex-col gap-y-8">
-                    <dl className="md:grid-cols-2 lg:gap-36 text-lg grid grid-cols-1 gap-12">
-                        <div id="wrap">
-                            <div className="w-full overflow-hidden rounded-lg h-full">
-                                <img ref={imageRef1} src="/image3.webp" alt="Interior Coating" className="min-w-full min-h-full h-auto object-cover object-center" />
-                            </div>
-                        </div>
-                        <div id="headlight">
-                            <div className="w-full overflow-hidden rounded-lg h-full">
-                                <img ref={imageRef2} src="/shop2.webp" alt="Exterior Coating" className="min-w-full min-h-full h-auto object-cover object-center" />
-                            </div>
-                        </div>
-                    </dl>
-                </div>
-                <p ref={descriptionRef2} className="text-gray-300 text-sm sm:text-base md:text-xl text-center py-12 xl:pb-24">
-                    Our team is always ready to answer your questions, provide expert advice, and guide you through the process of transforming your vehicle.
-                </p>
-                <p ref={descriptionRef3} className="text-gray-300 text-sm sm:text-base md:text-xl text-center">
-                    Please fill out the form below with your information and inquiry.  A representative will be in touch with you shortly.
-                </p>
-                <span className="flex justify-center items-center text-center">
-                    <svg ref={iconRef} xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" className="bi bi-telephone-fill mr-2" viewBox="0 0 16 16">
-                        <path fillRule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                    </svg>
-                    <p ref={descriptionRef4} className="text-gray-300 py-4 my-16 text-sm sm:text-base md:text-xl text-center">
-                        (310) 346-0336
-                    </p>
-                </span>
-            </div>
+        <>
+            <Helmet>
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "ContactPage",
+                    "name": "Contact Auto Film Experts",
+                    "description": "Get in touch with Auto Film Experts for inquiries about our automotive protection and customization services.",
+                    "url": "https://autofilmsxperts.com/#contact",
+                    "contactPoint": {
+                        "@type": "ContactPoint",
+                        "contactType": "Customer Service",
+                        "telephone": "+1-310-346-0336",
+                        "email": "info@autofilmsxperts.com"
+                    },
+                    "potentialAction": {
+                        "@type": "CommunicateAction",
+                        "name": "Contact Form"
+                    }
+                })}
+                </script>
+            </Helmet>
+            <h1 ref={contactTitleRef} className="text-5xl font-azo-sans font-bold py-8 text-center text-white">Contact Us!</h1>
             <form ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white p-8 rounded-lg shadow-md w-9/12 mx-auto">
                 <div className="form-group flex space-x-4">
                     <div className="w-1/2">
@@ -206,7 +193,7 @@ const Contact = () => {
                 <button type="submit" className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-AFE-RED hover:bg-slate-950 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-AFE-RED">Send</button>
             </form>
             <p ref={locationRef1} className="flex justify-center items-center text-center opacity-0 mt-10 text-gray-300 py-4 text-sm sm:text-base md:text-xl text-center">We look forward to working with you.</p>
-        </div>
+        </>
     );
 };
 

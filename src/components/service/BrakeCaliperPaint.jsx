@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Helmet } from 'react-helmet-async';
 import useScrollRestoration from '../../hooks/useScrollRestoration';
 import gsap from 'gsap';
 
@@ -20,9 +21,62 @@ const BrakeCaliperPaint = () => {
         }
     }, []);
     return (
-        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden container mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
-            
-            <div className="pt-14">
+        <>
+            <Helmet>
+                <title>Professional Brake Caliper Painting Services | Auto Film Experts</title>
+                <meta name="description" content="Enhance your vehicle with custom brake caliper painting. Heat-resistant, rust protection, aesthetic enhancement. Expert brake caliper paint services." />
+                <meta name="keywords" content="brake caliper paint, caliper painting, heat-resistant paint, custom calipers, brake enhancement, rust protection" />
+                <meta property="og:title" content="Professional Brake Caliper Painting Services | Auto Film Experts" />
+                <meta property="og:description" content="Enhance your vehicle with custom brake caliper painting. Heat-resistant, rust protection, aesthetic enhancement." />
+                <meta property="og:type" content="website" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Professional Brake Caliper Painting Services | Auto Film Experts" />
+                <meta name="twitter:description" content="Enhance your vehicle with custom brake caliper painting. Heat-resistant, rust protection." />
+                <link rel="canonical" href="https://autofilmsxperts.com/services/brake-caliper-paint" />
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Service",
+                    "name": "Brake Caliper Painting",
+                    "description": "Professional brake caliper painting services providing heat-resistant, rust-protective, and aesthetically pleasing finishes for vehicles.",
+                    "provider": {
+                        "@type": "LocalBusiness",
+                        "name": "Auto Film Experts",
+                        "url": "https://autofilmsxperts.com"
+                    },
+                    "serviceType": "Automotive Customization",
+                    "areaServed": "Local"
+                })}
+                </script>
+                <script type="application/ld+json">
+                {JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                        {
+                            "@type": "ListItem",
+                            "position": 1,
+                            "name": "Home",
+                            "item": "https://autofilmsxperts.com"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 2,
+                            "name": "Services",
+                            "item": "https://autofilmsxperts.com/#services"
+                        },
+                        {
+                            "@type": "ListItem",
+                            "position": 3,
+                            "name": "Brake Caliper Paint",
+                            "item": "https://autofilmsxperts.com/services/brake-caliper-paint"
+                        }
+                    ]
+                })}
+                </script>
+            </Helmet>
+            <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+                <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
                         <div className="mx-auto text-center max-w-2xl">
@@ -91,6 +145,7 @@ const BrakeCaliperPaint = () => {
                 </div>
             </div>
         </section>
+        </>
     );
 };
 

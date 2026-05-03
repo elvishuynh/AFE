@@ -10,13 +10,13 @@ import StarsCeiling from './service/StarsCeiling';
 import PaintCorrection from './service/PaintCorrection';
 
 const serviceComponents = {
-  "paint-protection-film": PaintProtectionFilm,
-  "paint-correction": PaintCorrection,
-  "ceramic-coat": CeramicCoat,
-  "vinyl-wrap": VinylWrap,
-  "window-tint": WindowTint,
-  "brake-caliper-paint": BrakeCaliperPaint,
-  "stars-in-the-ceiling": StarsCeiling,
+  'paint-protection-film': PaintProtectionFilm,
+  'paint-correction': PaintCorrection,
+  'ceramic-coating': CeramicCoat,
+  'vinyl-wrap': VinylWrap,
+  'window-tint': WindowTint,
+  'brake-caliper-paint': BrakeCaliperPaint,
+  'star-ceiling': StarsCeiling,
 };
 
 const DynamicServiceLoader = () => {
