@@ -76,7 +76,7 @@ const PaintCorrection = () => {
                 })}
                 </script>
             </Helmet>
-            <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+            <section id="paint-correction-hero" className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
                 <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
@@ -97,7 +97,7 @@ const PaintCorrection = () => {
                                 src="/paint-correction-1.webp" alt="Paint Correction 1" />
                         </div>
                     </div>
-                    <section className="bg-black" ref={expertRef}>
+                    <section id="paint-correction-benefits" className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6">
                                 <p className="text-3xl text-white lg:text-4xl font-bold">Benefits:</p>
@@ -146,7 +146,7 @@ const PaintCorrection = () => {
                             </div>
                         </div>
                     </section>
-                    <section className="bg-black" ref={expertRef}>
+                    <section id="paint-correction-process" className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6">
                                 <p className="text-3xl text-white lg:text-4xl font-bold">Process:</p>
@@ -197,6 +197,51 @@ const PaintCorrection = () => {
                             <span>Expert Technicians</span>
                         </div>
                     </div>
+                    <section id="paint-correction-faq" className="bg-black text-center">
+                        <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
+                            <div className="space-y-6 mb-12">
+                                <h2 className="text-3xl text-white lg:text-4xl font-bold">Frequently Asked Questions</h2>
+                            </div>
+                            <div className="space-y-6 max-w-3xl mx-auto">
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        How long does paint correction take?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Paint correction typically takes 1-3 days depending on the vehicle's condition and the level of correction needed. Single-stage corrections can be done in a day, while multi-stage corrections requiring more intensive work may take 2-3 days. We provide accurate time estimates after inspecting your vehicle.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        Will paint correction remove all scratches?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Paint correction can remove most surface scratches and swirls, but deep scratches that penetrate the clear coat cannot be fully removed. We assess each scratch's depth during the inspection and provide honest expectations. For deep scratches, we may recommend touch-up paint or PPF to prevent further damage.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        How often should I get paint correction?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        With proper maintenance and protection (PPF or ceramic coating), paint correction results can last years. However, vehicles exposed to harsh conditions may benefit from annual maintenance polishing. We recommend protecting your paint after correction to maintain the results and prevent future damage.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        Is paint correction safe for my paint?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        When performed by trained professionals using proper techniques and equipment, paint correction is completely safe. Our technicians measure paint thickness before starting and use appropriate compounds and polishing pads. We never remove more clear coat than necessary, ensuring your paint's integrity is maintained.
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </section>
                     <div className="flex justify-center py-8">
                         <ServiceContactCard />
                     </div>

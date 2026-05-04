@@ -10,7 +10,7 @@ const Home = () => {
             <div id="hero-container" className="static z-5">
                 <Hero />
             </div>
-                        <div id="about-container" className="py-10">
+            <div id="about-container" className="py-10">
                 <About />
             </div>
             <div id="services-container" className="py-10">

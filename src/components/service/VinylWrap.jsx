@@ -77,7 +77,7 @@ const VinylWrap = () => {
                 })}
                 </script>
             </Helmet>
-            <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+            <section id="vinyl-wrap-hero" className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
                 <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
@@ -98,7 +98,7 @@ const VinylWrap = () => {
                                 src="/image3.webp" alt="App screenshot" className="drop-shadow-2xl w-full h-auto rounded-md shadow-white"/>
                         </div>
                     </div>
-                    <section className="bg-black" ref={expertRef}>
+                    <section id="vinyl-wrap-benefits" className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6">
                                 <p className="text-3xl text-white lg:text-4xl font-bold">Benefits:</p>
@@ -159,6 +159,51 @@ const VinylWrap = () => {
                             <span>Professional Installation</span>
                         </div>
                     </div>
+                    <section id="vinyl-wrap-faq" className="bg-black text-center">
+                        <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
+                            <div className="space-y-6 mb-12">
+                                <h2 className="text-3xl text-white lg:text-4xl font-bold">Frequently Asked Questions</h2>
+                            </div>
+                            <div className="space-y-6 max-w-3xl mx-auto">
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        How long does vinyl wrap installation take?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Full vehicle wraps typically take 3-5 days depending on the vehicle size and complexity. Partial wraps can be completed in 1-2 days. We take the time needed for meticulous installation without rushing, ensuring a flawless finish that meets our quality standards.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        Can vinyl wrap be removed without damaging paint?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Yes, quality vinyl wrap can be removed without damaging the original paint when installed and removed professionally. Our wraps use premium adhesive that doesn't leave residue. We recommend professional removal to ensure the best results and protect your vehicle's paint.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        What colors and finishes are available?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        We offer hundreds of colors and finishes including matte, gloss, satin, metallic, chrome, carbon fiber, and custom printed designs. You can choose from manufacturer color matches or create completely custom looks. Our team can help you select the perfect finish for your vision.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        How long does vinyl wrap last?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Our premium vinyl wraps typically last 5-7 years with proper care. Longevity depends on factors like climate, parking conditions, and maintenance. We provide care instructions to maximize your wrap's lifespan. The wrap can be replaced when needed, allowing you to change your vehicle's look over time.
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </section>
                     <div className="flex justify-center py-8">
                         <ServiceContactCard />
                     </div>
