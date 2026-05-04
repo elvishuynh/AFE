@@ -29,7 +29,7 @@ const CeramicCoat = () => {
         };
     }, []);
     return (
-        <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden container mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
+        <section id="ceramic-hero" className="bg-black text-white relative font-azo-sans isolate overflow-hidden container mx-auto px-6 md:px-12 lg:px-24 xl:px-48">
             <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
@@ -57,7 +57,7 @@ const CeramicCoat = () => {
                             </div>
                         </div>
                     </div>
-                    <section className="bg-black" ref={expertRef}>
+                    <section id="ceramic-benefits" className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6 text-center">
                                 <p className="text-3xl text-white lg:text-4xl font-bold">Benefits:</p>
@@ -116,7 +116,7 @@ const CeramicCoat = () => {
                             <span>Premium Ceramic Coating</span>
                         </div>
                     </div>
-                    <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl text-center">
+                    <div id="ceramic-services" className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl text-center">
                             <div className="mt-12 lg:gap-y-16 flex flex-col gap-y-8">
                                 <dl className="pt-12 md:grid-cols-2 lg:gap-36 text-lg border-t border-white/10 grid grid-cols-1 gap-12">
                                     <div id="interior-coat">
@@ -151,6 +151,51 @@ const CeramicCoat = () => {
                             <span>Premium Ceramic Coating</span>
                         </div>
                     </div>
+                    <section id="ceramic-faq" className="bg-black text-center">
+                        <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
+                            <div className="space-y-6 mb-12">
+                                <h2 className="text-3xl text-white lg:text-4xl font-bold">Frequently Asked Questions</h2>
+                            </div>
+                            <div className="space-y-6 max-w-3xl mx-auto">
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        How long does ceramic coating last?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Our ceramic coating typically lasts 3-5 years with proper maintenance. The longevity depends on factors such as environmental conditions, washing frequency, and how well the vehicle is cared for. We provide detailed care instructions to maximize the coating's lifespan.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        Can ceramic coating be applied over existing paint protection film?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Yes, ceramic coating can be applied over PPF for enhanced protection and gloss. This combination provides the ultimate defense against environmental hazards while maintaining a showroom finish. Many customers choose to ceramic coat their PPF for maximum protection.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        How do I maintain ceramic coating?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Maintenance is simple. Regular washing with pH-neutral soap is sufficient. Avoid harsh chemicals or abrasive washing methods. We recommend using ceramic coating-safe products for the best results. The hydrophobic properties make washing easier and less frequent.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        Is ceramic coating worth the investment?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Absolutely. Ceramic coating provides long-term protection that saves money on paint correction and detailing. It enhances your vehicle's appearance, makes maintenance easier, and protects your investment. Many customers find the benefits far outweigh the initial cost.
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </section>
                     <div className="flex justify-center py-8">
                         <ServiceContactCard />
                     </div>

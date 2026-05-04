@@ -152,7 +152,7 @@ const PaintProtectionFilm = () => {
                 })}
                 </script>
             </Helmet>
-            <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+            <section id="ppf-hero" className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
             
             <div className="pt-14">
                 <div className="py-0 sm:py-32 lg:pb-40">
@@ -175,7 +175,7 @@ const PaintProtectionFilm = () => {
                                 src="/DSC02017.webp" alt="Paint Protection Film installation on vehicle exterior showing premium clear bra protection" className="drop-shadow-2xl w-full h-auto rounded-md shadow-white"/>
                         </div>
                     </div>
-                    <section className="bg-black" ref={expertRef}>
+                    <section id="ppf-benefits" className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6">
                                 <h2 className="text-3xl text-white lg:text-4xl font-bold">Benefits:</h2>
@@ -241,7 +241,7 @@ const PaintProtectionFilm = () => {
                             <span>Premium PPF Materials</span>
                         </div>
                     </div>
-                    <section className="bg-black" ref={expertRef}>
+                    <section id="ppf-packages" className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6">
                                 <p className="text-3xl text-white lg:text-4xl font-bold">Packages:</p>
@@ -283,7 +283,7 @@ const PaintProtectionFilm = () => {
                     <div className="flex justify-center py-8">
                         <a href="/contact" className="rounded-md bg-red-600 hover:bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors">Protect Your Vehicle Today</a>
                     </div>
-                    <section className="bg-black">
+                    <section id="ppf-testimonials" className="bg-black">
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6 mb-12">
                                 <h2 className="text-3xl text-white lg:text-4xl font-bold">Customer Testimonials</h2>
@@ -395,12 +395,12 @@ const PaintProtectionFilm = () => {
                             </div>
                         </div>
                     </section>
-                    <section className="bg-black">
+                    <section id="ppf-faq" className="bg-black text-center">
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6 mb-12">
                                 <h2 className="text-3xl text-white lg:text-4xl font-bold">Frequently Asked Questions</h2>
                             </div>
-                            <div className="space-y-6 max-w-3xl">
+                            <div className="space-y-6 max-w-3xl mx-auto">
                                 <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
                                     <summary className="flex items-center justify-between font-semibold text-white text-lg">
                                         How long does the PPF installation take?

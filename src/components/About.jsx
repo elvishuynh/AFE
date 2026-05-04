@@ -86,7 +86,7 @@ const About = () => {
                 <p ref={expertRef1} id="about-intro-text" className="text-gray-300 text-lg md:text-xl text-center py-5 px-4 md:px-24">
                     At the forefront of innovation in the automotive industry, we specialize in Paint Protection Film, Vinyl Wraps, Ceramic Coating, and Tinting Services that redifine vehicle aesthetics and safeguard against the elements.
                 </p>
-                <p ref={expertRef2} id="about-location" className="text-gray-300 text-lg md:text-xl text-center py-5">We are located at 1208 N Gaffey St, San Pedro, CA 90731</p>
+                <p ref={expertRef2} id="about-location" className="text-gray-300 text-lg md:text-xl text-center py-5">We are located at <a href="https://www.google.com/maps/dir/?api=1&destination=1208+N+Gaffey+St,+San+Pedro,+CA+90731" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:text-red-400 underline">1208 N Gaffey St, San Pedro, CA 90731</a></p>
                 <div id="about-maps" className="container mx-auto static z-5 px-8 pt-8 pb-16 lg:pt-8 md:pt-0">
                     <EmbedGoogleMaps />
                 </div>

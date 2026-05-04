@@ -76,7 +76,7 @@ const WindowTint = () => {
                 })}
                 </script>
             </Helmet>
-            <section className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
+            <section id="window-tint-hero" className="bg-black text-white relative font-azo-sans isolate overflow-hidden">
                 <div className="pt-14">
                 <div className="py-24 sm:py-32 lg:pb-40">
                     <div className="mx-auto px-6 max-w-screen-2xl">
@@ -97,7 +97,7 @@ const WindowTint = () => {
                                 src="/DSC01992.webp" alt="App screenshot" className="drop-shadow-2xl w-full h-auto rounded-md shadow-white"/>
                         </div>
                     </div>
-                    <section className="bg-black" ref={expertRef}>
+                    <section id="window-tint-benefits" className="bg-black" ref={expertRef}>
                         <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
                             <div className="space-y-6">
                                 <p className="text-3xl text-white lg:text-4xl font-bold">Benefits:</p>
@@ -154,6 +154,51 @@ const WindowTint = () => {
                             <span>Premium Tint Film</span>
                         </div>
                     </div>
+                    <section id="window-tint-faq" className="bg-black text-center">
+                        <div className="mx-auto px-8 py-12 xl:py-24 max-w-screen-2xl">
+                            <div className="space-y-6 mb-12">
+                                <h2 className="text-3xl text-white lg:text-4xl font-bold">Frequently Asked Questions</h2>
+                            </div>
+                            <div className="space-y-6 max-w-3xl mx-auto">
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        Is window tinting legal in California?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Yes, window tinting is legal in California with specific restrictions. Front side windows must allow at least 70% light transmission, while rear windows can be darker. We ensure all installations comply with state regulations and can advise you on the legal tint options for your vehicle.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        How long does window tint installation take?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Installation time varies by vehicle type and the number of windows being tinted. Most cars take 2-4 hours for complete installation. We recommend scheduling 3-4 hours to ensure meticulous installation without rushing. The curing process takes a few days before the tint is fully set.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        What tint percentage should I choose?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        The right tint percentage depends on your needs and legal restrictions. Lighter tints (50-70%) provide subtle heat reduction while maintaining visibility. Darker tints (5-35%) offer maximum privacy and heat rejection. We can show you samples and recommend the best option based on your preferences and local laws.
+                                    </p>
+                                </details>
+                                <details className="group bg-gray-900 rounded-lg border border-white/10 p-6 cursor-pointer hover:border-white/20 transition">
+                                    <summary className="flex items-center justify-between font-semibold text-white text-lg">
+                                        Will window tint affect my visibility at night?
+                                        <span className="transition group-open:rotate-180">▼</span>
+                                    </summary>
+                                    <p className="text-gray-400 mt-4">
+                                        Quality window tint is designed to maintain visibility while reducing glare. Our premium films are engineered to reduce harsh glare without compromising night visibility. We recommend lighter tints for front windows if night driving is a concern, and darker tints for rear windows where visibility is less critical.
+                                    </p>
+                                </details>
+                            </div>
+                        </div>
+                    </section>
                     <div className="flex justify-center py-8">
                         <ServiceContactCard />
                     </div>

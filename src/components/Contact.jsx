@@ -20,22 +20,7 @@ const Contact = () => {
             reset();
         }
 
-        gsap.fromTo(formRef.current,
-            { maxHeight: 0, opacity: 0 },
-            {
-                maxHeight: 700,
-                opacity: 1,
-                duration: 2,
-                ease: "circ.out",
-                scrollTrigger: {
-                    trigger: formRef.current,
-                    start: "top bottom",
-                    end: "bottom top",
-                    toggleActions: "play none none none",
-                    markers: false
-                }
-            }
-        );
+        gsap.set(formRef.current, { maxHeight: 700, opacity: 1 });
 
         const titleSplit = new SplitText(contactTitleRef.current, { type: "chars" });
         const chars = titleSplit.chars;
@@ -105,6 +90,7 @@ const Contact = () => {
             <h1 ref={contactTitleRef} className="text-5xl font-azo-sans font-bold py-8 text-center text-white">Contact Us!</h1>
             
             <div id="contact-container" className="container mx-auto px-4">
+                <p id="contact-intro" className="text-gray-300 text-lg md:text-xl text-center mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
                 <div id="contact-layout" className="flex flex-col lg:flex-row gap-8 justify-center items-start">
                     <div id="contact-sidebar" className="w-full lg:w-1/3 bg-gray-800 p-6 rounded-lg">
                         <h2 className="text-2xl font-azo-sans font-bold text-white mb-6">Get in Touch</h2>
@@ -147,7 +133,6 @@ const Contact = () => {
                             </div>
                         ) : (
                             <>
-                                <p id="contact-intro" className="text-gray-300 text-lg md:text-xl text-center mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
                                 <form id="contact-form" ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white p-8 rounded-lg shadow-md">
                                     <div id="form-name-group">
                                         <label htmlFor="name" className="block text-base font-semibold text-gray-700 mb-1">Name *</label>

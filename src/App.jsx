@@ -68,7 +68,7 @@ const App = () => {
                 <Route path="/vinyl-wrap" element={<VinylWrap />} />
                 <Route path="/window-tint" element={<WindowTint />} />
                 <Route path="/brake-caliper-paint" element={<BrakeCaliper />} />
-                <Route path="/stars-in-the-ceiling" element={<StarsCeiling />} />
+                <Route path="/star-ceiling" element={<StarsCeiling />} />
                 <Route path="/paint-protection-offer" element={<OfferVideo />} />
             </Routes>
             <Footer />
