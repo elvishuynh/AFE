@@ -8,7 +8,6 @@ import Home from './Home.jsx';
 import StorePage from './pages/storePage';
 import SocialsPage from './pages/socialsPage';
 import DynamicServiceLoader from './components/DynamicServiceLoader';
-import StarsCeiling from './components/service/StarsCeiling';
 import CeramicCoat from './components/service/CeramicCoat';
 import VinylWrap from './components/service/VinylWrap';
 import WindowTint from './components/service/WindowTint';
@@ -43,11 +42,16 @@ const App = () => {
             });
         }
         else if (location.pathname === "/contact") {
-            scroller.scrollTo('contact-container', {
-                duration: 800,
-                delay: 0,
-                smooth: 'easeInOutQuart'
-            });
+            setTimeout(() => {
+                const element = document.getElementById('contact-container');
+                if (element) {
+                    scroller.scrollTo('contact-container', {
+                        duration: 800,
+                        delay: 0,
+                        smooth: 'easeInOutQuart'
+                    });
+                }
+            }, 500);
         }
     }, [location]);
 
@@ -68,7 +72,6 @@ const App = () => {
                 <Route path="/vinyl-wrap" element={<VinylWrap />} />
                 <Route path="/window-tint" element={<WindowTint />} />
                 <Route path="/brake-caliper-paint" element={<BrakeCaliper />} />
-                <Route path="/star-ceiling" element={<StarsCeiling />} />
                 <Route path="/paint-protection-offer" element={<OfferVideo />} />
             </Routes>
             <Footer />

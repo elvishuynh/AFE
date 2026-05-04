@@ -151,6 +151,8 @@ const WindowTint = () => {
                         <div className="text-xs text-gray-400 flex items-center gap-3">
                             <span className="flex items-center gap-1"><span className="text-yellow-400">★</span> 5-Star Rated</span>
                             <span>•</span>
+                            <span>Lifetime Warranty</span>
+                            <span>•</span>
                             <span>Premium Tint Film</span>
                         </div>
                     </div>
