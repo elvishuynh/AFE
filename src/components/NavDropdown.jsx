@@ -2,15 +2,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import useComponentVisible from '../hooks/useComponentVisible';
 
-const NavDropdown = ({ title, items }) => {
+const NavDropdown = ({ title, items, isOpen, toggleDropdown, closeDropdown }) => {
   const { visibleRef, isComponentVisible, setIsComponentVisible } =
 		useComponentVisible(false);
 
   return (
     <div className="relative" ref={visibleRef}>
       <div
-        onClick={() => setIsComponentVisible(!isComponentVisible)}
-        className="mx-10 cursor-pointer hover:text-red-500 text-xl"
+        onClick={() => { setIsComponentVisible(!isComponentVisible); toggleDropdown && toggleDropdown(); }}
+        className="mx-10 cursor-pointer hover:text-red-500 text-xl md:text-2xl uppercase"
       >
         {title}
       </div>
@@ -19,9 +19,9 @@ const NavDropdown = ({ title, items }) => {
           {items.map((item, index) => (
             <Link
               key={index}
-              to={`/${title.toLowerCase()}${item.link}`}
+              to={item.link}
               className="block px-4 py-2 text-gray-800 hover:bg-gray-200"
-              onClick={() => setIsComponentVisible(!isComponentVisible)}
+              onClick={() => { setIsComponentVisible(false); closeDropdown && closeDropdown(); }}
             >
               {item.label}
             </Link>

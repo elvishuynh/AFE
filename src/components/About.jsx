@@ -83,10 +83,10 @@ const About = () => {
                 About Us
             </h1>
             <section id="about-intro">
-                <p ref={expertRef1} id="about-intro-text" className="text-gray-300 text-sm sm:text-base md:text-xl text-center py-5 px-24">
+                <p ref={expertRef1} id="about-intro-text" className="text-gray-300 text-lg md:text-xl text-center py-5 px-4 md:px-24">
                     At the forefront of innovation in the automotive industry, we specialize in Paint Protection Film, Vinyl Wraps, Ceramic Coating, and Tinting Services that redifine vehicle aesthetics and safeguard against the elements.
                 </p>
-                <p ref={expertRef2} id="about-location" className="text-gray-300 text-sm sm:text-base md:text-xl text-center py-5">We are located at 1208 N Gaffey St, San Pedro, CA 90731</p>
+                <p ref={expertRef2} id="about-location" className="text-gray-300 text-lg md:text-xl text-center py-5">We are located at 1208 N Gaffey St, San Pedro, CA 90731</p>
                 <div id="about-maps" className="container mx-auto static z-5 px-8 pt-8 pb-16 lg:pt-8 md:pt-0">
                     <EmbedGoogleMaps />
                 </div>
@@ -103,7 +103,7 @@ const About = () => {
                         </div>
                     </div>
                 </div>
-                <p ref={declarationRef} id="about-declaration" className="text-gray-300 text-sm sm:text-base md:text-xl text-center py-5 px-24">At Auto Film Experts, we are committed to providing the highest quality paint correction services. <br /> Our experienced technicians use state-of-the-art equipment and premium products to ensure exceptional results.  <br />We take pride in our attention to detail and dedication to customer satisfaction.</p>
+                <p ref={declarationRef} id="about-declaration" className="text-gray-300 text-lg md:text-xl text-center py-5 px-4 md:px-24">At Auto Film Experts, we are committed to providing the highest quality paint correction services. <br /> Our experienced technicians use state-of-the-art equipment and premium products to ensure exceptional results.  <br />We take pride in our attention to detail and dedication to customer satisfaction.</p>
             </section>
             <div id="about-images" className="flex justify-between items-center py-10 w-full mt-5">
                 <img ref={imgRef1} src="./shop1.webp" alt="Shop 1" className="w-1/3 rounded-l-lg" />
@@ -111,7 +111,7 @@ const About = () => {
                 <img ref={imgRef3} src="./shop4.webp" alt="Shop 4" className="w-1/3 rounded-r-lg" />
             </div>
             <section id="about-outro">
-                <p ref={locationRef} id="about-outro-text" className="text-gray-300 text-sm sm:text-base md:text-xl text-center py-5 px-24">
+                <p ref={locationRef} id="about-outro-text" className="text-gray-300 text-lg md:text-xl text-center py-5 px-4 md:px-24">
                     Our passion and commitment to quality craftsmanship make us the go-to destination for enthusiasts who demand nothing but the best for their vehicles. Step into a world where cutting-edge technology meets automotive artistry, and let us elevate your driving experience.
                 </p>
             </section>

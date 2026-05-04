@@ -40,29 +40,23 @@ const Navbar = () => {
     };
 
     useGSAP(() => {
-        const menu = menuRef.current;
-        const links = menu.querySelectorAll('.menu-link');
-        const split = new SplitText(links, { type: 'chars' }); // Ensure split is defined before use
+        const overlay = document.getElementById('mobile-overlay');
 
         if (isOpen) {
-            const tl = gsap.timeline();
-            tl.to(menu, { minHeight: '360px', height: "auto", opacity: 1, duration: 0.2, display: 'flex' })
-                .from(split.chars, { opacity: 0, y: 20, stagger: 0.05, duration: 0.2, ease: 'power2.out' }, "<")
-                .to(topBarRef.current, { y: 6, rotation: 135, transformOrigin: "center center", duration: 0.2 }, "<")
-                .to(middleBarRef.current, { y: 0, rotation: 180, opacity: 0, transformOrigin: "center center", duration: 0.2 }, "<")
-                .to(bottomBarRef.current, { y: -6, rotation: -135, transformOrigin: "center center", duration: 0.2 }, "<");
+            gsap.to(overlay, { opacity: 1, duration: 0.3, display: 'block' });
+            gsap.to(topBarRef.current, { y: 6, rotation: 135, transformOrigin: "center center", duration: 0.2 });
+            gsap.to(middleBarRef.current, { y: 0, rotation: 180, opacity: 0, transformOrigin: "center center", duration: 0.2 });
+            gsap.to(bottomBarRef.current, { y: -6, rotation: -135, transformOrigin: "center center", duration: 0.2 });
         } else {
-            const tl = gsap.timeline();
-            // Start all animations at the same time
-            tl.to(menu, { maxHeight: 0, opacity: 1, duration: 0.2, display: 'none' }, "<")
-                .to(topBarRef.current, { y: 0, rotation: 0, duration: 0.2 }, "<")
-                .to(middleBarRef.current, { y: 0, rotation: 0, opacity: 1, transformOrigin: "center center", duration: 0.2 }, "<")
-                .to(bottomBarRef.current, { y: 0, rotation: 0, duration: 0.2 }, "<");
+            gsap.to(overlay, { opacity: 0, duration: 0.3, display: 'none' });
+            gsap.to(topBarRef.current, { y: 0, rotation: 0, duration: 0.2 });
+            gsap.to(middleBarRef.current, { y: 0, rotation: 0, opacity: 1, transformOrigin: "center center", duration: 0.2 });
+            gsap.to(bottomBarRef.current, { y: 0, rotation: 0, duration: 0.2 });
         }
     }, [isOpen]);
 
     return (
-        <div className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-full sticky top-0 z-[999] bg-black">
             <div className="w-full flex justify-center py-4 bg-black">
                 <img src="/AFE.webp" alt="AFE Logo" className="w-24 h-auto" />
             </div>
@@ -116,33 +110,37 @@ const Navbar = () => {
                         </svg>
                     </button>
                 </div>
-                <div ref={menuRef} className="mobile-menu md:hidden absolute top-0 left-0 w-full bg-zinc-500 flex flex-col items-center z-30 overflow-x-hidden overflow-y-scroll  rounded-lg transition-max-height duration-500 ease-out" style={{ maxHeight: 0, opacity: 0, display: 'none' }}>
-                    <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
-                        <RouterLink to={"/"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); }}>Home</RouterLink>
+                <div id="mobile-overlay" className="fixed inset-0 bg-black/80 z-40" style={{ opacity: 0, display: 'none' }} onClick={() => setIsOpen(false)}></div>
+                <div ref={menuRef} className="mobile-menu md:hidden fixed top-0 right-0 w-3/4 h-full bg-zinc-900 flex flex-col justify-center items-center z-50" style={{ transform: isOpen ? 'translateX(0)' : 'translateX(100%)', transition: 'transform 0.3s ease-in-out' }}>
+                    <button onClick={() => setIsOpen(false)} className="absolute top-6 right-6 text-white z-50">
+                        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                    <div className="menu-link py-4 cursor-pointer hover:text-red-500 text-2xl uppercase text-white opacity-100">
+                        <RouterLink to={"/"} onClick={() => { setIsOpen(false); }}>Home</RouterLink>
                     </div>
-
-                    {/* <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase" >
-                        <RouterLink to={"/services"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); handleNavigation('services'); }}>Services</RouterLink>
-                    </div> */}
-                    <NavDropdown
-                        title="SERVICES"
-                        items={servicesItems}
-                        isOpen={openDropdown === 'services'}
-                        toggleDropdown={() => toggleDropdown('services')}
-                        closeDropdown={closeDropdown}
-                    />
-                    <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
-                        <RouterLink to={"/about"} smooth={"easeInOutQuart"} duration={300} onClick={() => { setIsOpen(false); }}>About</RouterLink>
+                    <div className="menu-link py-4 cursor-pointer hover:text-red-500 text-2xl uppercase text-white opacity-100">
+                        <span onClick={() => toggleDropdown('services')}>Services</span>
                     </div>
-                    <div>
-                        <RouterLink to={"/contact"} smooth={"easeInOutQuart"} duration={300} className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl" onClick={() => { setIsOpen(false);}}>CONTACT</RouterLink>
+                    {openDropdown === 'services' && (
+                        <div className="flex flex-col items-center py-2">
+                            {servicesItems.map((item, index) => (
+                                <RouterLink key={index} to={item.link} onClick={() => { setIsOpen(false); closeDropdown(); }} className="py-2 text-xl text-gray-300 hover:text-red-500">
+                                    {item.label}
+                                </RouterLink>
+                            ))}
+                        </div>
+                    )}
+                    <div className="menu-link py-4 cursor-pointer hover:text-red-500 text-2xl uppercase text-white opacity-100">
+                        <RouterLink to={"/about"} onClick={() => { setIsOpen(false); }}>About</RouterLink>
                     </div>
-                    <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase">
-                        <RouterLink to={"/store"} smooth={"easeInOutQuart"} duration={300}>Store</RouterLink>
+                    <div className="menu-link py-4 cursor-pointer hover:text-red-500 text-2xl uppercase text-white opacity-100">
+                        <RouterLink to={"/contact"} onClick={() => { setIsOpen(false); }}>Contact</RouterLink>
                     </div>
-                    {/* <div className="menu-link py-2 cursor-pointer hover:text-red-500 text-3xl uppercase" >
-                        <RouterLink to={"/socials"} smooth={"easeInOutQuart"} duration={300}>Socials</RouterLink>
-                    </div> */}
+                    <div className="menu-link py-4 cursor-pointer hover:text-red-500 text-2xl uppercase text-white opacity-100">
+                        <RouterLink to={"/store"} onClick={() => { setIsOpen(false); }}>Store</RouterLink>
+                    </div>
                 </div>
             </div>
         </div>
