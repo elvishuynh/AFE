@@ -108,6 +108,8 @@ const Hero = () => {
                         <span className="text-yellow-400">★</span> 5-Star Rated
                     </span>
                     <span>•</span>
+                    <span>10-Year Warranty</span>
+                    <span>•</span>
                     <span>Premium PPF Materials</span>
                 </div>
             </div>

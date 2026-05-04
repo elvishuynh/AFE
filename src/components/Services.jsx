@@ -146,6 +146,15 @@ const Services = () => {
             <a href="/window-tint" className="flex w-full mx-auto my-10 text-center items-center justify-center p-5 text-base font-medium text-gray-500 rounded-lg bg-gray-50 hover:text-gray-900 hover:bg-gray-100 dark:text-gray-100 dark:bg-gray-500 dark:hover:bg-gray-700 dark:hover:text-white">
               <span className="w-full">Learn More</span>
             </a>
+            <div className="flex flex-wrap items-center justify-center gap-4 text-xs text-gray-400 mt-2">
+                <span className="flex items-center gap-1">
+                    <span className="text-yellow-400">★</span> 5-Star Rated
+                </span>
+                <span>•</span>
+                <span>Lifetime Warranty</span>
+                <span>•</span>
+                <span>Premium Tint Film</span>
+            </div>
           </div>
           <div id="services-tint-image" className="reveal flex-none w-full lg:w-1/2">
             <img ref={imageRef4} src="./image2.webp" alt="Window Tinting" className="max-h-96 w-full lg:w-9/12 rounded-lg shadow-lg mx-auto" />

@@ -1,4 +1,4 @@
-import { FaPhone, FaEnvelope, FaQuoteLeft } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaQuoteLeft, FaKeyboard } from 'react-icons/fa';
 
 const StickyContactBar = () => {
     return (
@@ -12,11 +12,18 @@ const StickyContactBar = () => {
                     <span className="text-xs font-semibold">Call</span>
                 </a>
                 <a
+                    href="sms:3103460336"
+                    className="flex flex-col items-center text-white hover:text-red-500 transition-colors"
+                >
+                    <FaKeyboard className="text-xl mb-1" />
+                    <span className="text-xs font-semibold">Text</span>
+                </a>
+                <a
                     href="mailto:info@autofilmexperts.com"
                     className="flex flex-col items-center text-white hover:text-red-500 transition-colors"
                 >
                     <FaEnvelope className="text-xl mb-1" />
-                    <span className="text-xs font-semibold">Text or Email</span>
+                    <span className="text-xs font-semibold">Email</span>
                 </a>
                 <a
                     href="/contact"
