@@ -148,3 +148,44 @@ All future UI enhancements should be implemented with performance, accessibility
 - Core Web Vitals remain healthy after the changes are deployed.
 - No new layout shifts are introduced by images, animations, sticky bars, or form states.
 - Enhancements improve lead flow without sacrificing site speed, accessibility, or search visibility.
+
+## Mobile UI Enhancements
+
+### Current Issues
+- Font sizes too small on mobile devices
+- CTAs not full width on mobile
+- Navbar lacks mobile-friendly hamburger menu
+- Hero carousel shows 3 images per slide (wastes mobile viewport)
+
+### Mobile Roadmap
+
+#### 1. Typography
+- Increase base font sizes for mobile breakpoints
+- Scale headings proportionally for smaller screens
+- Ensure minimum readable font size of 16px for body text
+
+#### 2. Button Layout
+- Make all CTAs full width on mobile (w-full)
+- Stack buttons vertically instead of horizontally
+- Increase touch targets to minimum 44px height
+- Add adequate spacing between stacked buttons
+
+#### 3. Mobile Navigation
+- Implement hamburger icon for mobile navbar
+- Create side drawer menu (full screen width/height when open)
+- Add smooth slide-in animation for menu
+- Include close button and overlay backdrop
+- Ensure menu items are large and tappable
+
+#### 4. Hero Carousel
+- Show 1 image per slide on mobile (vs 3 on desktop)
+- Make carousel images full container width on mobile
+- Maintain 3 images per slide on tablet and desktop
+- Adjust image heights for mobile viewport
+- Ensure touch-friendly carousel navigation
+
+#### 5. Responsive Breakpoints
+- Mobile: < 768px
+- Tablet: 768px - 1024px
+- Desktop: > 1024px
+

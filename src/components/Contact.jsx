@@ -133,7 +133,7 @@ const Contact = () => {
                                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
                             </div>
                             <p className="text-center text-xs text-gray-400">5-Star Rated Service</p>
-                            <p className="text-center text-xs text-gray-400 mt-1">Premium Materials • Lifetime Warranty on PPF</p>
+                            <p className="text-center text-xs text-gray-400 mt-1">Premium Materials</p>
                         </div>
                     </div>
                     
@@ -147,7 +147,7 @@ const Contact = () => {
                             </div>
                         ) : (
                             <>
-                                <p id="contact-intro" className="text-gray-400 mb-4 text-center">Fill out the form below and we'll get back to you within 24 hours.</p>
+                                <p id="contact-intro" className="text-gray-300 text-lg md:text-xl text-center mb-6">Fill out the form below and we'll get back to you within 24 hours.</p>
                                 <form id="contact-form" ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white p-8 rounded-lg shadow-md">
                                     <div id="form-name-group">
                                         <label htmlFor="name" className="block text-base font-semibold text-gray-700 mb-1">Name *</label>

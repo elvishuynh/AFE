@@ -238,8 +238,6 @@ const PaintProtectionFilm = () => {
                         <div className="text-xs text-gray-400 flex items-center gap-3">
                             <span className="flex items-center gap-1"><span className="text-yellow-400">★</span> 5-Star Rated</span>
                             <span>•</span>
-                            <span>Lifetime Warranty</span>
-                            <span>•</span>
                             <span>Premium PPF Materials</span>
                         </div>
                     </div>
@@ -464,8 +462,6 @@ const PaintProtectionFilm = () => {
                         <a href="/contact" className="rounded-md bg-red-600 hover:bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors">Protect Your Vehicle Today</a>
                         <div className="text-xs text-gray-400 flex items-center gap-3">
                             <span className="flex items-center gap-1"><span className="text-yellow-400">★</span> 5-Star Rated</span>
-                            <span>•</span>
-                            <span>Lifetime Warranty</span>
                             <span>•</span>
                             <span>Premium PPF Materials</span>
                         </div>

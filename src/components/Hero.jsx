@@ -55,10 +55,10 @@ const Hero = () => {
 
     return (
         <section id="hero" className="container mx-auto h-full md:h-screen flex flex-col justify-center items-center pt-0 pb-2 md:pb-12 lg:pb-24 static text-white px-6 md:px-12 lg:px-24 xl:px-48">
-            <h1 id="hero-title" ref={titleRef1} className="text-3xl sm:text-4xl md:text-5xl font-azo-sans font-bold pb-8 text-center opacity-0">
+            <h1 id="hero-title" ref={titleRef1} className="text-5xl sm:text-5xl md:text-6xl font-azo-sans font-bold pb-8 text-center opacity-0">
                 AUTO FILM EXPERTS
             </h1>
-            <h2 id="hero-subtitle" ref={titleRef2} className="font-azo-sans text-center font-normal mb-10 text-3xl md:text-3xl z-10 opacity-0">
+            <h2 id="hero-subtitle" ref={titleRef2} className="font-azo-sans text-center font-normal mb-10 text-2xl md:text-3xl z-10 opacity-0">
                 Protect Your Paint Elevate Your Drive
             </h2>
             <div id="hero-carousel" className="relative w-full overflow-hidden">
@@ -66,10 +66,13 @@ const Hero = () => {
                     {carouselImages.map((slide, slideIndex) => (
                         <div key={slideIndex} id={`hero-slide-${slideIndex}`} className="w-full flex-shrink-0 flex gap-4 justify-center">
                             {slide.map((image, imageIndex) => (
-                                <div key={`${slideIndex}-${imageIndex}`} id={`hero-image-${slideIndex}-${imageIndex}`} className="w-1/2">
+                                <div key={`${slideIndex}-${imageIndex}`} id={`hero-image-${slideIndex}-${imageIndex}`} className="hidden md:block w-1/2 lg:w-1/3">
                                     <img src={image} alt={`Hero Image ${slideIndex}-${imageIndex}`} className="w-full h-96 object-cover rounded-lg" />
                                 </div>
                             ))}
+                            <div className="md:hidden w-full">
+                                <img src={slide[0]} alt={`Hero Image ${slideIndex}`} className="w-full h-96 object-cover rounded-lg" />
+                            </div>
                         </div>
                     ))}
                 </div>
@@ -83,16 +86,16 @@ const Hero = () => {
                     ))}
                 </div>
             </div>
-            <div id="hero-welcome" className="w-full flex flex-col justify-evenly items-center py-8 text-3xl md:text-3xl z-10 space-y-4 md:space-y-0 md:space-x-8">
-                <p ref={expertRef} className="mt-10 font-azo-sans text-center text-gray-300 font-normal opacity-0">
+            <div id="hero-welcome" className="w-full flex flex-col justify-evenly items-center py-8 text-xl md:text-3xl z-10 space-y-4 md:space-y-0 md:space-x-8">
+                <p ref={expertRef} className="mt-10 font-azo-sans text-center text-gray-300 font-normal opacity-0 text-lg md:text-xl">
                     Welcome to Auto Film Experts, where automotive excellence meets unrivaled protection and style. <br />
                 </p>
             </div>
-            <div id="hero-ctas" ref={ctaRef} className="flex flex-col md:flex-row gap-4 mt-8 opacity-0">
-                <a href="/contact" className="bg-red-600 hover:bg-red-700 text-white font-azo-sans font-bold py-3 px-8 rounded-lg text-center transition-colors">
+            <div id="hero-ctas" ref={ctaRef} className="flex flex-col gap-4 mt-8 opacity-0 w-full">
+                <a href="/contact" className="bg-red-600 hover:bg-red-700 text-white font-azo-sans font-bold py-4 px-8 rounded-lg text-center transition-colors w-full">
                     Get a Free Quote
                 </a>
-                <a href="tel:3103460336" className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-azo-sans font-bold py-3 px-8 rounded-lg text-center transition-colors">
+                <a href="tel:3103460336" className="bg-transparent border-2 border-white hover:bg-white hover:text-black text-white font-azo-sans font-bold py-4 px-8 rounded-lg text-center transition-colors w-full">
                     Call (310) 346-0336
                 </a>
             </div>
@@ -105,9 +108,7 @@ const Hero = () => {
                         <span className="text-yellow-400">★</span> 5-Star Rated
                     </span>
                     <span>•</span>
-                    <span>Lifetime Warranty on PPF</span>
-                    <span>•</span>
-                    <span>5-Year Ceramic Coating Warranty</span>
+                    <span>Premium PPF Materials</span>
                 </div>
             </div>
         </section>

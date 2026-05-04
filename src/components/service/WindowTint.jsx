@@ -152,8 +152,6 @@ const WindowTint = () => {
                             <span className="flex items-center gap-1"><span className="text-yellow-400">★</span> 5-Star Rated</span>
                             <span>•</span>
                             <span>Premium Tint Film</span>
-                            <span>•</span>
-                            <span>Lifetime Warranty</span>
                         </div>
                     </div>
                     <div className="flex justify-center py-8">
