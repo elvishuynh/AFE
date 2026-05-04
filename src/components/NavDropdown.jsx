@@ -10,7 +10,7 @@ const NavDropdown = ({ title, items, isOpen, toggleDropdown, closeDropdown }) =>
     <div className="relative" ref={visibleRef}>
       <div
         onClick={() => { setIsComponentVisible(!isComponentVisible); toggleDropdown && toggleDropdown(); }}
-        className="mx-10 cursor-pointer hover:text-red-500 text-xl md:text-2xl uppercase"
+        className="mx-10 cursor-pointer hover:text-red-500 text-xl uppercase"
       >
         {title}
       </div>
