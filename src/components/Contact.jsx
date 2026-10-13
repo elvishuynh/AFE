@@ -133,7 +133,7 @@ const Contact = () => {
                             </div>
                         ) : (
                             <>
-                                <form id="contact-form" ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white p-8 rounded-lg shadow-md">
+                                <form id="contact-form" ref={formRef} onSubmit={handleSubmit(onSubmit)} className="space-y-4 bg-white p-8 rounded-lg shadow-md text-black">
                                     <div id="form-name-group">
                                         <label htmlFor="name" className="block text-base font-semibold text-gray-700 mb-1">Name *</label>
                                         <input 
